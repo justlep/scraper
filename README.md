@@ -1,4 +1,7 @@
 # @justlep/scraper
+  [![NPM Version](https://img.shields.io/npm/v/@justlep/scraper.svg)](https://www.npmjs.com/package/@justlep/scraper)
+  [![Node.js Version](https://img.shields.io/node/v/@justlep/scraper.svg)]()
+
 A simple scraping helper for HTML web pages,
 including markup pre-sanitization / compacting.
 
@@ -13,6 +16,11 @@ Based on
 * [htmlparser2](https://github.com/fb55/htmlparser2/) 
   (provides fast, reliable parsing even when removing portions of the HTML before processing in order to speed up parsing)
 
+
+### Installation
+```javascript
+npm i @justlep/scraper
+```
 
 ### Usage:
 
