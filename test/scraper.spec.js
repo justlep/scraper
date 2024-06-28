@@ -1,7 +1,7 @@
 import {it, describe, expect, beforeAll, afterAll} from 'vitest';
 import nock from 'nock';
-import {lookupPageTitle, loadPageAsHtml, loadPageAsCheerio} from '../lib/scraper.js';
-import {ScraperOpts} from '../lib/ScraperOpts.js';
+import {lookupPageTitle, loadPageAsHtml, loadPageAsCheerio} from '../index.js';
+import {ScraperOpts} from '../index.js';
 import {readFileSync} from 'node:fs';
 import {join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';

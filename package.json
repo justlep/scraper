@@ -1,9 +1,11 @@
 {
   "name": "@justlep/scraper",
   "description": "A simple scraper for HTML web pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
-  "main": "index.js",
+  "exports": {
+    "import": "./index.js"
+  },
   "author": "Lennart Pegel <github@justlep.net>",
   "bugs": "https://github.com/justlep/scraper/issues",
   "engines": {
