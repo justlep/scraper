@@ -1,0 +1,26 @@
+{
+  "name": "@justlep/scraper",
+  "description": "A simple scraper for HTML web pages",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "author": "Lennart Pegel <github@justlep.net>",
+  "bugs": "https://github.com/justlep/scraper/issues",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest --environment=node --dir test/ run",
+    "updateSnapshots": "npm test -- -u"
+  },
+  "dependencies": {
+    "@types/cheerio": "^0.22.35",
+    "cheerio": "^1.0.0-rc.12",
+    "entities": "^5.0.0",
+    "htmlparser2": "^9.1.0"
+  },
+  "devDependencies": {
+    "nock": "^13.5.4",
+    "vitest": "^1.6.0"
+  }
+}

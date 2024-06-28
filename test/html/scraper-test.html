@@ -1,0 +1,2473 @@
+<!DOCTYPE html>
+<!-- This html was copied from kvraudio.com for testing purposes -->
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Sell &amp; Buy (+Special Offers, Deals &amp; Promos) Forum - KVR Audio</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - KVR Audio" href="/forum/feed?sid=6dab6250a3a1333b56c5c1c37fa2ce06">			<link rel="alternate" type="application/atom+xml" title="Feed - New Topics" href="/forum/feed/topics?sid=6dab6250a3a1333b56c5c1c37fa2ce06">		<link rel="alternate" type="application/atom+xml" title="Feed - Forum - Sell &amp; Buy (+Special Offers, Deals &amp; Promos)" href="/forum/feed/forum/43?sid=6dab6250a3a1333b56c5c1c37fa2ce06">		
+	<link rel="canonical" href="https://www.kvraudio.com/forum/viewforum.php?f=43">
+
+<!--
+	phpBB style name: prosilver
+	Based on style:   prosilver (this is the default phpBB3 style)
+	Original author:  Tom Beddard ( http://www.subBlue.com/ )
+	Modified by:
+-->
+
+<link href="./assets/css/font-awesome.min.css?assets_version=173" rel="stylesheet">
+<link href="./styles/prosilver/theme/stylesheet.css?assets_version=173" rel="stylesheet">
+<link href="./styles/prosilver/theme/en/stylesheet.css?assets_version=173" rel="stylesheet">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/prosilver/theme/tweaks.css?assets_version=173" rel="stylesheet">
+<![endif]-->
+
+
+
+
+<meta property="og:title" content="KVR Forum: Sell &amp; Buy (+Special Offers, Deals &amp; Promos) Forum">
+<meta property="og:description" content="KVR Audio Forum - Sell &amp; Buy (+Special Offers, Deals &amp; Promos) Forum">
+<meta property="og:image" content="https://static.kvraudio.com/i/b/kvraudio-300x300-grey-eeeeee.png">
+<meta property="og:image" content="https://static.kvraudio.com/i/b/kvraudio-300x300-blue.png">
+<meta name="msapplication-config" content="none">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="msapplication-TileImage" content="https://static.kvraudio.com/i/kvr-grey-144x144.png">
+<link type="image/png" rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="https://static.kvraudio.com/i/kvr-grey-144x144.png">
+
+<link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-v18-latin-ext_latin-regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/static/fonts/open-sans-v18-latin-ext_latin-700.woff2" crossorigin>
+
+<link type="text/css" rel="stylesheet" href="https://static.kvraudio.com/inc/kz.css?v=521a">
+<link type="text/css" rel="stylesheet" href="https://static.kvraudio.com/inc/kvr.css?v=521a"><link type="text/css" rel="stylesheet" href="https://static.kvraudio.com/inc/kvr2.css?v=521a">
+<script src="https://static.kvraudio.com/inc/jquery-3.6.0-ui-1.13.1.kvr.min.js"></script>
+<script src="https://static.kvraudio.com/inc/kvr-pae.js?v=396"></script>
+<script defer src="https://static.kvraudio.com/inc/kz.js?v=396"></script>
+<script>
+<!--
+var kvrwidth = kvr_readCookie("kvrwidth");
+$(function(){
+  if(!kvrwidth || (kvrwidth != $(window).width()))
+  {
+    kvr_createCookie("kvrwidth",$(window).width(),365);
+  }
+
+  mykvr = {"logged":"out"}
+
+if($("#kvrtopicblock").length)
+{
+  kvr_check_for_vids("#kvrtopicblock");
+}
+
+if($("#preview").length)
+{
+  kvr_check_for_vids("#preview");
+}
+
+setTimeout(function(){
+  if($(".checkforvis").length)
+  {
+    kvr_load_vids_and_audios();
+    $(window).on("scrollstop", function() {
+      kvr_load_vids_and_audios();
+    });
+  }
+},1000);
+
+
+document.addEventListener("click", function (e) {
+  if (!e.target.classList.contains("kvrmarks-addthispage")) return;
+  e.preventDefault();
+  window.location = "/kvrmarks.php?url=" + encodeURI(window.location) + "&lbl=" + escape(document.title);
+  return false;
+}, false);
+
+document.addEventListener("click", function(e){
+    if(!e.target.matches(".togglekvrsectioninline")) return;
+    e.preventDefault();
+    var targ = e.target.nextElementSibling;
+    var isopen = document.querySelectorAll(".isopen");
+    isopen.forEach(function(e2){e2.classList.remove("isopen")});
+    var kvrsections = document.querySelectorAll(".kvrsectioninline");
+    kvrsections.forEach(function(e2){e2 == targ ? targ.classList.toggle("hideflex") : e2.classList.add("hideflex");});
+    targ.classList.contains("hideflex") ? e.target.classList.remove("isopen") : e.target.classList.add("isopen");
+
+    if(e.target.classList.contains("kvr-fetch-n-menu") && (!targ.firstChild || e.target.classList.contains("kvr-force")))
+    {
+      targ.innerHTML = kvrloadingcss3an1;
+
+      kvr_fetch(e.target.getAttribute("href"), {}, {contenttype: "text/html", method: "GET"}).then(function (data) {
+        if(data.html || data.error)
+        {
+          var tmp = document.createElement("div");
+          tmp.innerHTML = (data.html ? data.html : data.error);
+          targ.innerHTML = "";
+          targ.append(tmp);
+        }else{
+          targ.innerHTML = '<div style="padding: 20px;"><p>An error occurred</p></div>';
+        }
+      }).catch(function (error) {
+        targ.innerHTML = '<div style="padding: 20px;"><p>An error occurred</p><p style="color: red;">' + error + '</p></div>';
+      });
+    }
+  }, false);
+
+
+  $(window).resize(function(){
+    if($(window).width()-$("#kvrblock").width() > 370)
+    {
+      $("#kvrptblock.isonleft").show();
+    }else{
+      $("#kvrptblock.isonleft").hide();
+    }
+  });
+
+  $(".kvrcolorswitch").click(function(){
+    var d = $(this).data("d");
+    if(d == "")
+    {
+      kvr_eraseCookie("kvrcolor");
+    }else{
+      kvr_createCookie("kvrcolor",parseInt(d,10),365);
+    }
+    window.location = window.location;
+    return false;
+  });
+
+  $(document).on("click", ".kvr_tutd", function(){
+    var t = $(this);
+
+    if(t.hasClass("kvrloginrequired"))
+    {
+      return false;
+    }
+
+    var id = t.data("postid");
+    var ud = t.data("ud");
+
+    var sp = t.find("span");
+    var txt = t.text();
+    sp.append('<span style="position: absolute;margin-left: -22px;">'+kvrloadingcss3an2+'</span>');
+
+    $.get("/account/", {m: "tutd", id: id, ud: ud}, function(data){
+      if(data.s == "100")
+      {
+        $("a[data-postid="+id+"]").removeClass("kvrsuccess");
+        $("a[data-postid="+id+"][data-ud='1']").find("span").text(data.up);
+        $("a[data-postid="+id+"][data-ud='2']").find("span").text(data.down);
+        $("a[data-postid="+id+"][data-ud="+data.my+"]").addClass("kvrsuccess");
+      }else{
+        sp.text(txt);
+        if(data.s == "99")
+        {
+          alert(data.m);
+        }
+      }
+    }, "json");
+    return false;
+  });
+});
+
+soundManager.onready(function(){inlinePlayer = new InlinePlayer();});
+
+var googletag = googletag || { };
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+
+googletag.cmd.push(function(){
+var mappingTopC = googletag.sizeMapping().addSize([980, 400], [728, 90]).addSize([468, 200], [468, 60]).addSize([0, 0], [320, 50]).build();
+googletag.defineSlot('/3804147/728x90-Header',[728, 90], 'header320to728').defineSizeMapping(mappingTopC).addService(googletag.pubads());
+//var mappingTop90 = googletag.sizeMapping().addSize([400, 100], [90, 90]).build();
+//googletag.defineSlot('/3804147/90x90',[1, 1], 'kvrheader90').defineSizeMapping(mappingTop90).addService(googletag.pubads());
+googletag.defineSlot('/3804147/300x250', [300, 250], 'div-gpt-ad-1319706183506-2').addService(googletag.pubads());
+googletag.defineSlot('/3804147/300x600', [300, 600], 'div-gpt-ad-1406729622787-0').addService(googletag.pubads());
+var mappingBotC = googletag.sizeMapping().addSize([980, 400], [728, 90]).addSize([468, 200], [468, 60]).addSize([0, 0], [320, 50]).build();
+googletag.defineSlot('/3804147/728x90-Footer',[728, 90], 'div-gpt-ad-1319706183506-3').defineSizeMapping(mappingBotC).addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MWNP2F9');
+//-->
+</script>
+
+<style>
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('/static/fonts/open-sans-v18-latin-ext_latin-regular.woff2') format('woff2'),
+       url('/static/fonts/open-sans-v18-latin-ext_latin-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('/static/fonts/open-sans-v18-latin-ext_latin-700.woff2') format('woff2'),
+       url('/static/fonts/open-sans-v18-latin-ext_latin-700.woff') format('woff');
+}
+
+
+[id] {
+  scroll-margin-top: 110px;
+}
+body {background-color: #777D84;}
+li, ul, ol, li ul, li ol {margin: 0;}
+.tags a:hover, .tags a:active {color: #fff !important;}
+.forum_unread, .pm_unread, .topic_unread {background-image: url("./_images/_topic_unread.gif");}
+.forum_unread_locked, .topic_unread_locked {background-image: url("./_images/_topic_unread_locked.gif");}
+.forum_read_subforum {background-image: url("./_images/_forum_read_subforum.gif");}
+.forum_unread_subforum {background-image: url("./_images/_forum_unread_subforum.gif");}
+.forum_read, .pm_read, .topic_read {background-image: url("./_images/_topic_read.gif");}
+.forum_read_locked, .topic_read_locked {background-image: url("./_images/_topic_read_locked.gif");}
+.topic_moved {background-image: url("./_images/_topic_moved.gif");}
+.sticky_read {background-image: url("./_images/_sticky_read.gif");}
+.sticky_unread {background-image: url("./_images/_sticky_unread.gif");}
+.sticky_read_locked {background-image: url("./_images/_sticky_read_locked.gif");}
+.sticky_unread_locked {background-image: url("./_images/_sticky_unread_locked.gif");}
+.announce_read, .global_read {background-image: url("./_images/_announce_read.gif");}
+.announce_unread, .global_unread {background-image: url("./_images/_announce_unread.gif");}
+.announce_read_locked, .global_read_locked {background-image: url("./_images/_announce_read_locked.gif");}
+.announce_unread_locked, .global_unread_locked {background-image: url("./_images/_announce_unread_locked.gif");}
+.topic_read_hot {background-image: url("./_images/_topic_read.gif");}
+.topic_unread_hot {background-image: url("./_images/_topic_unread.gif");}
+.ptrelatedinpage .kvrptbox {
+  margin: 10px;
+  width: 230px;
+  background-color: #2e5e79;
+}
+.ptrelatedinpage .kvrsearchresbox {
+  border: 0 none;
+  border-radius: 0;
+  margin: 1px 0 0;
+  width: auto;
+}
+.ptrelatedinpage a.kvrgrad5 {
+  background-color: #2e5e79;
+  background-image: none;
+  color: #fff !important;
+}
+
+#kvrforumheader {
+  border-bottom-width: 0;
+  margin-bottom: 20px !important;
+  padding: 0 !important;
+}
+
+#kvrforumheader[data-id="0"]::before {
+  content: "This forum is sponsored by:";
+  position: absolute;
+  margin-top: -18px;
+  color: #555;
+  font-size: 0.6rem;
+}
+
+#kvrforumheader[data-id="0"].not-sponsored::before {
+  content: "";
+}
+
+#kvrforumheader[data-id="0"],
+#kvrforumheader[data-id="0"] > a,
+#kvrforumheader[data-id="0"] > a > img {
+  border-radius: 5px;
+}
+
+.section-mcp #main,
+.section-mcp .wrap {max-width: 100%;}
+.section-mcp #column1 {grid-template-columns: auto;}
+
+.section-mcp #kvrforumheader[data-id="0"],
+.section-posting #kvrforumheader[data-id="0"] {
+  display: none;
+}
+
+.kvr-floatedleft {
+  float: left;
+  margin: 0 20px 20px 0;
+  clear: both;
+}
+
+dt.attach-image + dd,
+.kvr-floatedleft dd {display: none;}
+
+.attach-image img {border-width: 0;}
+
+#message-box textarea {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.post-buttons a.kvr_tutd {
+  color: #555 !important;
+}
+
+.kvr_tutd.kvrsuccess svg {
+  fill: #065fd4;
+}
+
+.post-buttons.kvrbasicbuttons .button {
+  background-image: none;
+  border-width: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.kvr_tutd span, .kvr_tutd span {
+  color: #777;
+  font-size: 11px !important;
+}
+
+.kvr_tutd:hover span, .kvr_tutd:focus span,
+.kvr_tutd:hover svg, .kvr_tutd:focus svg {
+  fill: #0A8ED0;
+  color: #0A8ED0;
+}
+
+.post {
+  overflow: hidden;
+}
+
+#kvrtopictitle {
+  overflow-wrap: anywhere;
+}
+
+.row .pagination li a, .row .pagination li span {
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+
+dd.lastpost {
+  width: 150px;
+}
+
+.section-index dd.lastpost {
+  width: 250px;
+}
+
+.kvr-vf-about a:hover {
+  text-decoration: underline;
+}
+
+#page-header {
+  position: sticky;
+  top: 45px;
+  background-color: #fff;
+  z-index: 2;
+}
+
+ul.topiclist,
+.postprofile dd,
+.postprofile dt {
+line-height: 1.5;
+}
+
+ul.topiclist dd {
+  border-left-width: 0 !important;
+}
+
+a.topictitle, a.forumtitle {
+  font-size: 0.9rem;
+}
+
+#kvrptres {
+  z-index: 1020 !important;
+  color: #555;
+}
+
+.breadcrumbs .crumb {
+  font-weight: normal;
+}
+
+li.header dt, li.header dd {
+  font-size: 0.8rem;
+  font-family: open sans;
+  font-weight: normal !important;
+}
+
+dl.mini dt {
+  padding-bottom: 10px;
+}
+
+p.post-notice {
+  border-radius: 5px;
+}
+
+#main blockquote {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#kvrblock textarea {
+  border-radius: 5px;
+}
+
+#kvrblock input#subject {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#format-buttons > * {
+  margin-bottom: 3px;
+}
+
+#main h2 {
+  font-size: 1.0rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-width: 0;
+  padding: 0;
+}
+
+#main h3 {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-width: 0;
+  padding: 0;
+}
+
+h2.posting-title {
+  padding: 20px !important;
+}
+
+.navigation li {
+  font-weight: normal;
+}
+
+.button {
+  font-weight: normal;
+}
+
+ul.linklist > li.rightside, p.rightside, a.rightside {
+  margin-left: 15px;
+}
+
+@media only screen and (max-width: 467px) {
+  #page-header, #kvrforumheader {
+    margin-left: -30px !important;
+    margin-right: -30px !important;
+    padding: 0 10px !important;
+  }
+
+  h2.posting-title {
+    padding: 20px !important;
+    margin: 0.5em 0 0.2em 0 !important;
+  }
+
+  h2.posting-title a {
+    color: #cfc !important;
+  }
+  .topicreview {
+    margin: 0;
+  }
+}
+
+
+</style>
+<!--[if lt IE 10]>
+<style type="text/css">
+.flex > div, .flex > a {
+  display: inline-block;
+}
+
+.flex > .elliptit {
+  vertical-align: bottom;
+}
+</style>
+<![endif]-->
+
+</head>
+<body id="phpbb" class="nojs notouch section-viewforum ltr ">
+
+<div id="kvrtogglemainfixedbarcon"><a href="#" id="kvrtogglemainfixedbar" aria-label="Toggle Main Menu"><span class="kvr-notify-circle" style="position: absolute; left: 24px; top: 4px; width: 20px; height: 20px; font-size: 10px; background-color: #333; border-radius: 50%;"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="#eee" style="transform: none; left: 0; top: 0; position: relative;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span><span class="kvrburger"><span></span><span></span><span></span></span></a><a href="/" id="kvrtogglemainfixedbarlogo" class="flex flexcenter flexselfstretch" style="padding: 10px;"><img src="https://static.kvraudio.com/i/kvr-audio-360.png" alt="KVR Audio" style="width: 50px; height: 20px;" width="50" height="20"></a></div><div id="kvrmainfixedbar" class="flex flexcolumn kvr-links-trans-05 firstload"><div><a href="/forum/ucp.php?mode=login" class="kvrloginrequired flexflexed" style="background-color: #305060;">Sign In </a><a href="/forum/ucp.php?mode=register" class="flexcenter" style="background-color: #df4141; color: #fff; border-radius: 0; padding-right: 13px; margin-right: -10px;">Create Account <span class="flex flexcenter" style="margin-left: 5px;"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="#eee" style="transform: none; left: 0; top: 0; position: relative;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></a></div><div><a href="/" class="flexflexed">News</a><a href="#" class="togglekvrsection hasarrow" aria-label="Toggle News Sections Menu"><span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/deals.php">#KVRDeals &amp; Giveaways</a><a href="/news/about/instruments">Instruments</a><a href="/news/about/effects">Effects</a><a href="/news/about/hosts">Hosts</a><a href="/news/about/sounds">Soundware</a><a href="/news/about/mobile">Mobile</a><a href="/news/about/hardware">Hardware</a><a href="/news/about/free">Free</a><a href="/news/about/developers">Developer Tools</a><a href="/news/about/edu">Education, Training, Tutorials, etc.</a><a href="/news/about/offers">Offers, Competitions &amp; Events</a><a href="/namm">NAMM</a><a href="/musikmesse">Musikmesse</a><hr style="border-color: #666;"><a href="/news-archive.php">News Archive (by month)</a></div></div><div><a href="/plugins" class="flexflexed">Plug-ins, Apps, Sounds, etc.</a><a href="#" class="togglekvrsection hasarrow" aria-label="Toggle Products Sections Menu"><span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/marketplace/">KVR Marketplace</a><a href="/plugins">What's New?</a><a href="/developer/">Search Developers / Brands</a><a href="/reviews.php">Product Reviews</a><a href="/plugin-ranks.php">Product Rankings</a><a href="/ratings.php">Product Ratings</a><a href="/groups/">Groups: Whats's in?</a><a href="/banks.php" title="Downloads and Uploads">Patches &amp; Presets Downloads &amp; Uploads</a></div></div><div><a href="/marketplace/" class="flexflexed">Marketplace</a><a href="/marketplace/?a=991" class="togglekvrsection hasarrow kvr-fetch-n-menu" aria-label="Toggle Marketplace Sections Menu"><span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"></div></div><div><a href="/forum/" class="flexflexed">Forum</a><a href="#" class="togglekvrsection hasarrow" title="My Forums">My</a><div class="hideflex kvrsection smallerlinksellipted"><div class="flex" style="background-color: #555; border-radius: 3px 3px 0 0;"><div style="padding: 10px;">My Forums</div> <a href="/account/#myforums" style="margin-left: auto;">Edit</a></div></div><a href="/forum/latest-posts/index.php?mode=mylt" class="hasarrow" title="Latest Posts in the forum">LP</a><a href="/inc/a.php?w=kvr-forums" class="kvr-fetch-n-display hasarrow" data-requires="kvr-mark-or-hide.js" data-func="kvr_mark_or_hide" data-args='["#kvr-forums-quick-list", "kvr-filter-forums-quick-list"]' title="Show All Forums (Full Screen Popup)" aria-label="Show All Forums in a full screen popup)">All</a><a href="#" class="togglekvrsection hasarrow" aria-label="Toggle Forum Sections Menu"><span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/forum/search.php">Search the forum</a><a href="/forum/search.php?search_id=unanswered">Unanswered Posts</a></div></div><a href="/mykvr/" title="My KVR" class="hasnotify">My KVR <span class="kvr-notify-circle" style="background-color: #555;"><span>0</span></span></a><a href="/focus" title="Chris Halaby's Industry Focus Blog">Industry Focus Blog &amp; Interviews</a><div><a href="#" class="togglekvrsection flexflexed hasarrowtext">Newsletters, Giveaways, Social &amp; RSS<span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/marketplace/kvr-marketplace-news">KVR Marketplace News</a><a href="/newsletter.php">KVR Audio Weekly Newsletter</a><a href="/kvrdeals-newsletter.php">KVRDeals Newsletter</a><a href="/giveaways">Giveaways</a><a href="https://www.facebook.com/pages/KVR-Audio-News/207641972591939" title="KVR Audio on Facebook" target="_blank" rel="noopener"><span class="spit spfacecircle"></span> <span>Facebook</span></a><a href="https://twitter.com/kvraudio" title="@kvraudio on Twitter" target="_blank" rel="noopener"><span class="spit sptwitcircle"></span> <span>Twitter</span></a><a href="https://www.instagram.com/kvraudio/" target="_blank" rel="noopener"><span class="spit spinstacircle"></span> <span>Instagram</span></a><a href="https://www.youtube.com/c/KVRAudioNews" target="_blank" rel="noopener"><span class="spit spyoutubecircle">&nbsp;</span> <span>YouTube</span></a><a href="/news-feed.php"><span class="spit sprss2"></span> <span>RSS Feeds</span></a></div></div><div><a href="#" class="togglekvrsection flexflexed hasarrowtext">Special Events<span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/kvr-developer-challenge/">KVR Developer Challenge</a><a href="/readers-choice-awards/">KVR Readers' Choice Awards</a><a href="/kvr-guitar-month">KVR Guitar Month</a><a href="/polls.php">Polls &amp; Surveys</a><a href="/kvr-is-10">KVR Celebrates 10 Years (2010)</a></div></div><a href="/video/">Videos</a><a href="/learn/">Learn</a><a href="/music.php">Music by KVR Members</a><div><a href="#" class="togglekvrsection flexflexed hasarrowtext">Contact, About, Submit &amp; More<span class="kvrdownarrow"></span></a><div class="hideflex kvrsection"><a href="/devs">Are you an Audio Software or Plug-in Developer? Take control of your brand at KVR!</a><a href="/submissions">How to Submit News, Plug-ins, etc.</a><a href="https://partnerservices.kvraudio.com">Advertise @ KVR Audio</a><a href="/about-kvr">About / Contact Us</a><a href="/forum/viewtopic.php?t=44705">Rules &amp; FAQ</a><a href="/privacy">Privacy Statement</a></div></div></div>
+<img id="kvrgo" src="/static/go/0.gif" alt="" width="1" height="1" style="display: none;">
+<div id="mykvrbg"></div>
+<div id="sm2-container"><!-- SM2 flash goes here --></div>
+
+
+ 	<div id="hyperheader" class="kvr-links-trans-05" style="height: 46px; display: grid; grid-template-columns: minmax(110px, 1fr) minmax(200px, 1344px) minmax(0px, 1fr);"><div></div><div class="flex flexcenter" style="font-family: Open Sans, Verdana, Helvetica, Trebuchet MS; text-transform: uppercase; align-items: stretch;"><div class="flex flexcenter spreademout" style="padding: 6px 10px 6px 0; align-items: stretch;"><a href="/plugins" class="kvrhidetiny">Plugins</a><a href="/developer/" class="kvrhidesmall">Developers</a><a href="/forum/" class="kvrhidetiny">Forum</a><a href="/marketplace/" class="kvrhidesmall">Marketplace</a><a href="/deals" class="kvrhidesmall">Deals</a><a href="/video" class="kvrhidesmall">Videos</a></div><div class="flex flexcenter nowrap" style="padding: 10px; margin-left: auto; align-items: stretch;"><a href="/marketplace/kvr-points" class="kvr-cen-spit-num posrelit kvrhidesmall" style="padding: 0; background-color: transparent; margin-left: 5px; text-align: center;" aria-label="KVR Points"><span class="spit spbadgegrey" title=""><span class="kvr-points-value">0</span></span></a><a href="/marketplace/" title="KVR Marketplace" class="kvrhidetiny" style="padding: 0; margin-left: 5px;" aria-label="KVR Marketplace"><span class="spit spmpcircle flex flexcenter flexcontentcenter"><span class="spit spcartblk" style="display: none;"></span></span></a><a class="memdropit" id="kvrcartsummary" href="#" data-d="999" title="Cart" style="margin-right: 5px; padding: 0 10px;" aria-label="Show Cart"><span id="kvrcartsumitems" class="kvrhidemid">0 items</span><span class="kvrhidemid"> | </span> <span>$<span id="kvrcartsumtotal">0.00</span></span> <span class="kvrdownarrow" style="border-color: #eee; margin-left: 10px;"></span></a><a href="/marketplace/checkout/" class="kvr-checkout-top-bar kvrhidesmall" style=" background-color: #ddd; color: #555; padding: 0 10px;"><span>CHECKOUT</span> <span class="kvrdownarrow" style="border-color: #555; margin: 0 0 0 5px; transform: rotate(-45deg)"></span></a><a href="/search" class="narrow-search" style="margin-left: 10px; border-radius: 50%; width: 26px; padding: 0; background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAA3NCSVQICAjb4U/gAAAARVBMVEX////7+/v5+fn29vbx8fHq6urn5+fm5ubj4+Pg4ODb29vZ2dnNzc3MzMytra2srKypqamoqKinp6empqalpaWampqZmZl+OQyUAAAACXBIWXMAAAsSAAALEgHS3X78AAAAJXRFWHRTb2Z0d2FyZQBNYWNyb21lZGlhIEZpcmV3b3JrcyBNWCAyMDA0h3aszwAAABZ0RVh0Q3JlYXRpb24gVGltZQAwMi8wNy8xOXRSRxUAAABWSURBVHicXY1LEoAwCENb+rOViqLl/kdVcGHHLB6TCQHnoPPgDk4FRDUsO5lDUnpCHVxtobFSgpk4lOec4Oa1c1kHtqPFlSW/t/H5g1mK+1QkTS79shv/KgMA0KdAOgAAAABJRU5ErkJggg==') no-repeat 50% 50% !important;"></a><script>$(function(){
+  $(document).on("click", ".narrow-search", function(){
+  if($("#quick-search-kvr-pop").length)
+  {
+    $("#quick-search-kvr-pop").remove();
+    document.getElementById("kvrloginbg").classList.add("hideflex");
+  }else{
+    $("body").prepend('<div id="quick-search-kvr-pop" class="flex kvrform2019" style="position: fixed; top: 0; right: 0; left: 0; height: 46px; padding: 10px; background-color: #111; z-index: 1022;"><div style="margin: 0 auto;"><form id="quick-search-kvr2" method="get" action="/search/" class="flex" style="margin: 0 auto; height: 26px;"><input id="quick-search-kvr-q" name="q" class="searchbg" type="search" placeholder="QUICK SEARCH KVR" style="margin: 0 !important; padding: 0 24px 0 10px !important; border-color: #fff; font-size: 12px; width: 100% !important; border-radius: 999em;"></form><div class="shaditdrk posrelit" style="background-color: #f6f6f6; padding: 10px; border-radius: 5px; margin-top: 20px; color: #555; box-sizing: border-box; max-width: 320px;"><a href="#" class="narrow-search" style="position: absolute; right: -20px; top: -41px; color: #ccc; font-size: 14px; font-family: open sans; line-height: 14px;">X</a><div class="kvrbuttonizea"><div class="flex" style="margin-bottom: 5px;"><a href="/forum/ucp.php?mode=login" id="quick-login" class="kvrloginrequired flex flexcenter flexflexed flexcontentcenter" style="background-image: none !important; border-width: 0 !important; color: #fff !important; background-color: #305060 !important; margin-right: 5px !important;">Sign In</a><a href="/forum/ucp.php?mode=register" class="flex flexcenter flexcontentcenter" style="background-image: none !important; border-width: 0 !important; background-color: #df4141 !important; color: #fff !important; margin-left: 5px !important;">Create Account <span class="flex flexcenter" style="margin-left: 5px;"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24" fill="#eee" style="transform: none; left: 0; top: 0; position: relative;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></a></div><div class="bignflat flex flexcolumn"><div style="font-size: 0.8rem; background-color: #ddd; border-radius: 5px; padding: 10px;">Type in the search box above and hit return to quick search KVR.  Some useful links are below.</div><a href="/plugins/">Search the KVR Product Database</a><a href="/marketplace/">Buy Plugins in the KVR Marketplace</a><a href="/forum/latest-posts/index.php?mode=mylt">Read the Latest Forum Posts</a><hr><a href="/devs" style="background-color: #df4141 !important; color: #fff !important;">Are you an Audio Software or Plug-in Developer? Take control of your brand at KVR!</a></div></div></div></div></div>');
+    $("#quick-search-kvr-q").focus();
+    $("#quick-search-kvr2").submit(function(){var q = $(this).find("input").val(); window.location = "/search/" + q; return false;});
+
+    $("#quick-login").click(function(){$("#quick-search-kvr-pop").remove();});
+
+    var kvrloginbg = document.getElementById("kvrloginbg");
+    if(kvrloginbg)
+    {
+      kvrloginbg.classList.remove("hideflex");
+    }else{
+      el = document.createElement("div");
+      el.id = "kvrloginbg";
+      document.body.appendChild(el);
+    }
+
+    document.addEventListener("click", function(e){
+      if(e.target.id != "kvrloginbg")
+      return;
+
+      document.getElementById("kvrloginbg").classList.add("hideflex");
+      $("#quick-search-kvr-pop").remove();
+      e.preventDefault();
+    }, false);
+
+    /* Escape Key */
+    document.addEventListener("keyup", function (e) {
+      if(e.keyCode != 27) return;
+      document.getElementById("quick-search-kvr-q") ? kvr_simulateClick(document.getElementById("kvrloginbg")) : "";
+    }, false);
+  }
+  return false;
+  });
+  });
+  </script></div></div><div></div></div><div id="kvrmenuc" class="kvrmenugen shaditdrk kvrhideblur" style="color: #555; border-radius: 5px; margin-top: -10px;"></div><div class="flex flexwrap" style=" text-align: center; background-color: #333; margin: 45px 0 -45px 0; font-weight: bold; font-family: open sans; font-size: 1rem; position: relative;"><a href="/forum/ucp.php?mode=login" class="flexflexed kvrloginrequired " style="flex-basis: 200px; padding: 10px;color: #fff; background-color: #305060; width: 50%;">Log In</a><a href="/forum/ucp.php?mode=register" class="flexflexed" style="flex-basis: 200px; padding: 10px;background-color: #df4141; color: #fff; width: 50%;">Create An Account</a></div>
+
+  <div id="herobar">
+  <header id="header" class="kvrblockdynamic flex">
+    <div id="header320to728" class="kvr320to728"><script>googletag.cmd.push(function(){googletag.display('header320to728')});</script></div>
+    <div id="kvrheaderflex" class="kvrhidesmall"><a style="display: block; height: 90px; background: url(https://static.kvraudio.com/i/b/best_service_engine_500x90_dept_engine_200805.jpg) no-repeat scroll 0px 50% transparent;" href="/marketplace/engine-instruments"></a></div>
+    <div id="kvrheader90" class="kvrhidesmall" style="width: 180px;"><a id="kvrmp-header-image-lnk" href="https://www.kvraudio.com/more/4662" style="display: block; position: absolute; z-index: 1; left: 0; top: 0; max-width: 180px; max-height: 90px; width: 100%;" target="_top"><img id="kvrmp-header-image-img" src="https://static.kvraudio.com/i/a/toontrackmidimonth.jpg" style="max-width: 180px; max-height: 90px; width: 100%;" alt="Toontrack MIDI Month" title="Toontrack MIDI Month" width="180" height="90"></a></div>
+  </header>
+  </div>
+
+   <div id="kvrssgrid">
+   <div><div></div></div>
+
+<div id="kvrblock">
+
+  
+  <div id="column1">
+    <div id="main" class="mainforumdiv kvr_sm_inline">
+
+            
+<!-- KVR Main Content-->
+<div id="kvrforumheader" style="line-height: normal; margin: 0;"><div id="forumdealsearch" class="flex flexwrap" style="background-color: #eee;"><a href="/deals.php"><b>#KVRDeals</b></a><a href="/marketplace/" class="flexflexed"><b>Get more deals in the KVR Marketplace</b></a><div class="flex" style="margin-left: auto;"><a data-s="2" href="#"><span class="kvractive">Random</span></a><a data-s="0" href="#"><span>Newest</span></a><a data-s="1" href="#"><span>Ending</span></a></div></div><div id="forumdeals" class="hovthisblue flex flexwrap"><a href="/news/sonible-valentines-day-sale---save-up-to-35-54148" class="flex" style="flex-basis: 300px; padding: 20px;"><img src="https://static.kvraudio.com/i/news/50/sonible_logo_rgb_50x50.png" alt="" width="50" height="50" style="margin-right: 20px; width: 50px; height: 50px;"><span><span class="bluethistoo" style="color: #888; font-size: 90%;">Promoted</span><br><b style="font-size: 0.8rem; line-height: 1.6;">Sonible Valentine's Day Sale - Save up to 35%</b><br><span style="font-size: 90%; font-weight: normal; display: inline-block; padding-top: 5px;">Ends: Mon, Feb 28, 2022</span></span></a><a href="/marketplace/foley-volume-2-trash-by-soundtrack-loops" class="flex" style="flex-basis: 300px; padding: 20px;"><img src="https://static.kvraudio.com/i/news/50/sl50.png" alt="" width="50" height="50" style="margin-right: 20px; width: 50px; height: 50px;"><span><b style="font-size: 0.8rem; line-height: 1.6;">Soundtrack Loops Foley Volume 2 Trash - 40% off until 18 Apr 2022</b><br><span style="font-size: 90%; font-weight: normal; display: inline-block; padding-top: 5px;">Ends: Mon, Apr 18, 2022</span></span></a><a href="/marketplace/ava-spectral-compressor-by-harrison" class="flex" style="flex-basis: 300px; padding: 20px;"><img src="https://static.kvraudio.com/i/news/50/harrisonconsoles.png" alt="" width="50" height="50" style="margin-right: 20px; width: 50px; height: 50px;"><span><b style="font-size: 0.8rem; line-height: 1.6;">Harrison AVA Spectral Compressor - 28% off until 2 Mar 2022</b><br><span style="font-size: 90%; font-weight: normal; display: inline-block; padding-top: 5px;">Ends: Wed, Mar 2, 2022</span></span></a></div></div><p style="text-align: center; padding: 20px; background-color: #ddd; font-size: 1rem; border-radius: 5px; margin-bottom: 20px; margin-top: -20px;">&raquo; <a href="/forum/viewtopic.php?f=43&t=49313" style="font-weight: bold; color: #36c;">Sell &amp; Buy Forum Rules</a> &laquo;</p>
+<div id="wrap" class="wrap">
+	<a id="top" class="top-anchor" accesskey="t"></a>
+	<div id="page-header">
+		<div class="headerbar" role="banner">
+					<div class="inner">
+
+			<div id="site-description" class="site-description">
+		<a id="logo" class="logo" href="./index.php?sid=6dab6250a3a1333b56c5c1c37fa2ce06" title="KVR Forum index">
+					<span class="site_logo"></span>
+				</a>
+				<h1>KVR Audio</h1>
+				<p>Pro Audio Forum - VST, AU, AAX Plugin and Audio Software Discussion</p>
+				<p class="skiplink"><a href="#start_here">Skip to content</a></p>
+			</div>
+
+									
+			</div>
+					</div>
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick Forum Links</span>
+			</a>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+				  
+					
+					
+										<li class="separator"></li>
+          <li  data-skip-responsive="true">
+      			<a href="/forum/help/faq?sid=6dab6250a3a1333b56c5c1c37fa2ce06" rel="help" title="Frequently Asked Questions" role="menuitem">
+      				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+      			</a>
+      		</li>
+      		<li class="separator"></li>
+      		<li><a title="Feed" href="/forum/app.php/feed/forum/43"><i class="icon fa-feed fa-fw" aria-hidden="true"></i>RSS Feed of this forum</a></li><li class="separator"></li>
+					
+									</ul>
+			</div>
+		</li>
+
+		
+		
+			<li class="rightside" data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;redirect=viewforum.php%3Ff%3D43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+				
+		
+		<li class="breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+
+			
+							<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope><a itemprop="item" href="./index.php?sid=6dab6250a3a1333b56c5c1c37fa2ce06" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="name">KVR Forum index</span></a><meta itemprop="position" content="1" /></span>
+
+																				
+								<span class="crumb" itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope data-forum-id="43"><a itemprop="item" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06"><span itemprop="name">Sell &amp; Buy (+Special Offers, Deals &amp; Promos)</span></a><meta itemprop="position" content="2" /></span>
+										
+					</li>
+
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" class="page-body" role="main">
+		
+		<h1 class="forum-title" style="margin: 20px 0; font-family: 'Open Sans', verdana;"><a href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">Sell &amp; Buy (+Special Offers, Deals &amp; Promos)</a></h1>
+<div>
+	<!-- NOTE: remove the style="display: none" when you want to have the forum description on the forum body -->
+	<div style="display: none !important;">Buy and sell, post special offers, group buys, etc. NOT product announcements.<br /></div>	<p><strong>Moderator:</strong> <a href="./memberlist.php?mode=group&amp;g=6468&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">KVR Moderators (Main)</a></p></div>
+
+
+
+	<div class="action-bar bar-top">
+
+				
+		<a href="./posting.php?mode=post&amp;f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="button" title="Post a new topic">
+							<span>New Topic</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+					</a>
+				
+	
+	<div class="pagination">
+				668 topics
+					<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>23</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="30" data-base-url=".&#x2F;viewforum.php&#x3F;f&#x3D;43&amp;amp&#x3B;sid&#x3D;6dab6250a3a1333b56c5c1c37fa2ce06" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30" role="button">2</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=60" role="button">3</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90" role="button">4</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=120" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=660" role="button">23</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+			</div>
+
+	</div>
+
+
+
+
+	
+			<div class="forumbg announcement">
+		<div class="inner">
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt><div class="list-inner">Announcements</div></dt>
+					<dd class="posts">Replies</dd>
+					<dd class="views">Views</dd>
+					<dd class="lastpost"><span>Last post</span></dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist topics">
+	
+				<li class="row bg1 announce">
+						<dl class="row-item announce_read_locked">
+				<dt title="This topic is locked, you cannot edit posts or make further replies.">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=295450&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Buying and selling more safely</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=29021&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Meffy</a> &laquo; <a href="./viewtopic.php?t=295450&amp;p=6385533&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p6385533" title="Go to last post"><time datetime="2016-02-13T16:08:29+00:00">Sat Feb 13, 2016 4:08 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=29021&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Meffy</a> &raquo; <time datetime="2010-08-23T12:38:49+00:00">Mon Aug 23, 2010 12:38 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">4 <dfn>Replies</dfn></dd>
+				<dd class="views">39228 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=29021&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Meffy</a>													<a href="./viewtopic.php?t=295450&amp;p=6385533&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p6385533" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2016-02-13T16:08:29+00:00">Sat Feb 13, 2016 4:08 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2 announce">
+						<dl class="row-item announce_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=49313&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Sell &amp; Buy Forum Rules</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=377904&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">mladi</a> &laquo; <a href="./viewtopic.php?t=49313&amp;p=8345374&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8345374" title="Go to last post"><time datetime="2022-02-04T20:43:24+00:00">Fri Feb 04, 2022 8:43 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>32</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=2&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" style="color: #AA0000;" class="username-coloured">Ben [KVR]</a> &raquo; <time datetime="2004-07-10T10:39:28+00:00">Sat Jul 10, 2004 10:39 am</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=49313&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=49313&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=49313&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30">3</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">32 <dfn>Replies</dfn></dd>
+				<dd class="views">84381 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=377904&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">mladi</a>													<a href="./viewtopic.php?t=49313&amp;p=8345374&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8345374" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-04T20:43:24+00:00">Fri Feb 04, 2022 8:43 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+			</ul>
+		</div>
+	</div>
+	
+			<div class="forumbg">
+		<div class="inner">
+		<ul class="topiclist">
+			<li class="header">
+				<dl class="row-item">
+					<dt><div class="list-inner">Topics</div></dt>
+					<dd class="posts">Replies</dd>
+					<dd class="views">Views</dd>
+					<dd class="lastpost"><span>Last post</span></dd>
+				</dl>
+			</li>
+		</ul>
+		<ul class="topiclist topics">
+	
+				<li class="row bg1 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Feedback Thread</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=315906&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">endlessdog</a> &laquo; <a href="./viewtopic.php?t=74467&amp;p=8367506&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367506" title="Go to last post"><time datetime="2022-02-27T12:20:05+00:00">Sun Feb 27, 2022 12:20 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>48224</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=6242&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">serge</a> &raquo; <time datetime="2005-02-07T14:49:43+00:00">Mon Feb 07, 2005 2:49 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=48150">3211</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=48165">3212</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=48180">3213</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=48195">3214</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=74467&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=48210">3215</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">48224 <dfn>Replies</dfn></dd>
+				<dd class="views">2705813 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=315906&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">endlessdog</a>													<a href="./viewtopic.php?t=74467&amp;p=8367506&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367506" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T12:20:05+00:00">Sun Feb 27, 2022 12:20 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Bargain Center: discussion, gossip, etc.</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=178752&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">jrides</a> &laquo; <a href="./viewtopic.php?t=262178&amp;p=8367361&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367361" title="Go to last post"><time datetime="2022-02-27T05:26:12+00:00">Sun Feb 27, 2022 5:26 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>46365</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=1111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Teksonik</a> &raquo; <time datetime="2009-09-02T18:18:04+00:00">Wed Sep 02, 2009 6:18 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=46305">3088</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=46320">3089</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=46335">3090</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=46350">3091</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=46365">3092</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">46365 <dfn>Replies</dfn></dd>
+				<dd class="views">3678423 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=178752&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">jrides</a>													<a href="./viewtopic.php?t=262178&amp;p=8367361&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367361" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T05:26:12+00:00">Sun Feb 27, 2022 5:26 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Bargain Center (Bargains ONLY; NO Chat; NO Pictures, NO videos -- TEXT ONLY)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=319177&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Biome_Digital</a> &laquo; <a href="./viewtopic.php?t=262151&amp;p=8366981&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8366981" title="Go to last post"><time datetime="2022-02-26T19:00:36+00:00">Sat Feb 26, 2022 7:00 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>19044</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=29021&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Meffy</a> &raquo; <time datetime="2009-09-02T18:09:24+00:00">Wed Sep 02, 2009 6:09 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=18975">1266</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=18990">1267</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=19005">1268</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=19020">1269</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=262151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=19035">1270</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">19044 <dfn>Replies</dfn></dd>
+				<dd class="views">5898537 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=319177&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Biome_Digital</a>													<a href="./viewtopic.php?t=262151&amp;p=8366981&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8366981" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-26T19:00:36+00:00">Sat Feb 26, 2022 7:00 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Possible scam buyer! Using PayPal Friends &amp; Family = NO PROTECTION if you get scammed</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=540621&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">LAV888</a> &laquo; <a href="./viewtopic.php?t=541544&amp;p=8365431&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8365431" title="Go to last post"><time datetime="2022-02-25T00:19:51+00:00">Fri Feb 25, 2022 12:19 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>224</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=29021&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Meffy</a> &raquo; <time datetime="2020-03-19T02:11:53+00:00">Thu Mar 19, 2020 2:11 am</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=150">11</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=165">12</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=180">13</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=195">14</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=541544&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=210">15</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">224 <dfn>Replies</dfn></dd>
+				<dd class="views">26853 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=540621&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">LAV888</a>													<a href="./viewtopic.php?t=541544&amp;p=8365431&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8365431" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-25T00:19:51+00:00">Fri Feb 25, 2022 12:19 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Vendor license policy collection</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=486649&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ghostwhistler</a> &laquo; <a href="./viewtopic.php?t=520503&amp;p=8364741&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8364741" title="Go to last post"><time datetime="2022-02-24T12:47:35+00:00">Thu Feb 24, 2022 12:47 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>108</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=408460&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">joe_b</a> &raquo; <time datetime="2019-02-18T15:47:06+00:00">Mon Feb 18, 2019 3:47 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=45">4</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=60">5</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=75">6</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90">7</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=520503&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=105">8</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">108 <dfn>Replies</dfn></dd>
+				<dd class="views">16836 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=486649&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ghostwhistler</a>													<a href="./viewtopic.php?t=520503&amp;p=8364741&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8364741" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-24T12:47:35+00:00">Thu Feb 24, 2022 12:47 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">KVR Member Music Releases</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=3610&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">burkek</a> &laquo; <a href="./viewtopic.php?t=65194&amp;p=8360889&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8360889" title="Go to last post"><time datetime="2022-02-20T09:51:31+00:00">Sun Feb 20, 2022 9:51 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>786</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=3398&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">pHz</a> &raquo; <time datetime="2004-11-29T21:14:45+00:00">Mon Nov 29, 2004 9:14 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=720">49</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=735">50</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=750">51</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=765">52</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=65194&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=780">53</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">786 <dfn>Replies</dfn></dd>
+				<dd class="views">158988 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=3610&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">burkek</a>													<a href="./viewtopic.php?t=65194&amp;p=8360889&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8360889" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-20T09:51:31+00:00">Sun Feb 20, 2022 9:51 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Vendors allowing license transfers</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=486649&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ghostwhistler</a> &laquo; <a href="./viewtopic.php?t=354654&amp;p=8359934&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8359934" title="Go to last post"><time datetime="2022-02-19T12:59:55+00:00">Sat Feb 19, 2022 12:59 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>536</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=3353&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">discoDSP</a> &raquo; <time datetime="2012-07-13T10:55:44+00:00">Fri Jul 13, 2012 10:55 am</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=465">32</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=480">33</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=495">34</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=510">35</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=354654&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=525">36</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">536 <dfn>Replies</dfn></dd>
+				<dd class="views">93287 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=486649&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ghostwhistler</a>													<a href="./viewtopic.php?t=354654&amp;p=8359934&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8359934" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-19T12:59:55+00:00">Sat Feb 19, 2022 12:59 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2 sticky">
+						<dl class="row-item sticky_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">PayPal and the GIFT option for international users (19 EU / 6 International countries atm)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=494645&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Amogath</a> &laquo; <a href="./viewtopic.php?t=324042&amp;p=8336108&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8336108" title="Go to last post"><time datetime="2022-01-26T20:53:52+00:00">Wed Jan 26, 2022 8:53 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>135</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=9761&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Compyfox</a> &raquo; <time datetime="2011-07-21T09:37:31+00:00">Thu Jul 21, 2011 9:37 am</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=75">6</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90">7</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=105">8</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=120">9</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=324042&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=135">10</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">135 <dfn>Replies</dfn></dd>
+				<dd class="views">73641 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=494645&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Amogath</a>													<a href="./viewtopic.php?t=324042&amp;p=8336108&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8336108" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-01-26T20:53:52+00:00">Wed Jan 26, 2022 8:53 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578100&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Komplete 13 Ultimate, Studio One, Best Service, Projectsam</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=428857&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">talboot</a> &laquo; <a href="./viewtopic.php?t=578100&amp;p=8367508&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367508" title="Go to last post"><time datetime="2022-02-27T12:24:10+00:00">Sun Feb 27, 2022 12:24 pm</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=428857&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">talboot</a> &raquo; <time datetime="2022-02-17T16:28:49+00:00">Thu Feb 17, 2022 4:28 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">2 <dfn>Replies</dfn></dd>
+				<dd class="views">223 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=428857&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">talboot</a>													<a href="./viewtopic.php?t=578100&amp;p=8367508&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367508" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T12:24:10+00:00">Sun Feb 27, 2022 12:24 pm</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">[FS] 10 EUR deals: Audiority PolyComp, iZotopes, Serato Sample LE &amp; more.. [WTB] Valhallas, FabFilters and NI Replika XT</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=340960&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">andre9701</a> &laquo; <a href="./viewtopic.php?t=521628&amp;p=8367491&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367491" title="Go to last post"><time datetime="2022-02-27T11:39:53+00:00">Sun Feb 27, 2022 11:39 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>355</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=340960&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">andre9701</a> &raquo; <time datetime="2019-03-10T20:33:59+00:00">Sun Mar 10, 2019 8:33 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=285">20</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=300">21</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=315">22</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=330">23</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=521628&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=345">24</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">355 <dfn>Replies</dfn></dd>
+				<dd class="views">31737 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=340960&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">andre9701</a>													<a href="./viewtopic.php?t=521628&amp;p=8367491&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367491" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T11:39:53+00:00">Sun Feb 27, 2022 11:39 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578584&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Arturia Chorus Juno 6, Filter Mini, Tape Mello-Fi</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=385279&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Moosy_Moose</a> &laquo; <a href="./viewtopic.php?t=578584&amp;p=8367471&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367471" title="Go to last post"><time datetime="2022-02-27T10:54:25+00:00">Sun Feb 27, 2022 10:54 am</time></a>
+													</div>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=385279&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Moosy_Moose</a> &raquo; <time datetime="2022-02-27T10:54:25+00:00">Sun Feb 27, 2022 10:54 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">26 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=385279&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Moosy_Moose</a>													<a href="./viewtopic.php?t=578584&amp;p=8367471&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367471" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T10:54:25+00:00">Sun Feb 27, 2022 10:54 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578583&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Softube Tube-Tech, NoiseAsh Need</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=340540&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Twrogstudio</a> &laquo; <a href="./viewtopic.php?t=578583&amp;p=8367468&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367468" title="Go to last post"><time datetime="2022-02-27T10:38:49+00:00">Sun Feb 27, 2022 10:38 am</time></a>
+													</div>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=340540&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Twrogstudio</a> &raquo; <time datetime="2022-02-27T10:38:49+00:00">Sun Feb 27, 2022 10:38 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">39 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=340540&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Twrogstudio</a>													<a href="./viewtopic.php?t=578583&amp;p=8367468&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367468" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T10:38:49+00:00">Sun Feb 27, 2022 10:38 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=573170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS/FT:  Comeback Kid+Par. Aggr by BABY Audio/Plugin Alliance/LX480 Essential/IK Multimedia/Auto-Tune Access/ EQuivocate</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=472786&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trachkovsky</a> &laquo; <a href="./viewtopic.php?t=573170&amp;p=8367466&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367466" title="Go to last post"><time datetime="2022-02-27T10:36:55+00:00">Sun Feb 27, 2022 10:36 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>46</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=472786&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trachkovsky</a> &raquo; <time datetime="2021-11-12T22:46:33+00:00">Fri Nov 12, 2021 10:46 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=573170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=573170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=573170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30">3</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=573170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=45">4</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">46 <dfn>Replies</dfn></dd>
+				<dd class="views">3217 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=472786&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trachkovsky</a>													<a href="./viewtopic.php?t=573170&amp;p=8367466&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367466" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T10:36:55+00:00">Sun Feb 27, 2022 10:36 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578254&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Relab LX480 Complete, DMG Equilibrium, Soundtoys, PA</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=389851&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">parnarules</a> &laquo; <a href="./viewtopic.php?t=578254&amp;p=8367464&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367464" title="Go to last post"><time datetime="2022-02-27T10:29:57+00:00">Sun Feb 27, 2022 10:29 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>3</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=389851&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">parnarules</a> &raquo; <time datetime="2022-02-20T09:16:59+00:00">Sun Feb 20, 2022 9:16 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">3 <dfn>Replies</dfn></dd>
+				<dd class="views">249 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=389851&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">parnarules</a>													<a href="./viewtopic.php?t=578254&amp;p=8367464&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367464" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T10:29:57+00:00">Sun Feb 27, 2022 10:29 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=577887&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Eventide H3000, Zebra 2, Xils V+</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=6977&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alexsmoke</a> &laquo; <a href="./viewtopic.php?t=577887&amp;p=8367459&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367459" title="Go to last post"><time datetime="2022-02-27T10:08:08+00:00">Sun Feb 27, 2022 10:08 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=6977&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alexsmoke</a> &raquo; <time datetime="2022-02-13T16:19:19+00:00">Sun Feb 13, 2022 4:19 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">2 <dfn>Replies</dfn></dd>
+				<dd class="views">202 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=6977&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alexsmoke</a>													<a href="./viewtopic.php?t=577887&amp;p=8367459&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367459" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T10:08:08+00:00">Sun Feb 27, 2022 10:08 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Audiothing, Baby, Cherry Audio bundles, DDMF, Magix, PSP, Serato, cheap stuff (27 Feb 2022)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=401792&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ralfrobert</a> &laquo; <a href="./viewtopic.php?t=558451&amp;p=8367438&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367438" title="Go to last post"><time datetime="2022-02-27T09:31:00+00:00">Sun Feb 27, 2022 9:31 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>204</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=401792&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ralfrobert</a> &raquo; <time datetime="2020-12-31T17:21:15+00:00">Thu Dec 31, 2020 5:21 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=135">10</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=150">11</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=165">12</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=180">13</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=558451&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=195">14</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">204 <dfn>Replies</dfn></dd>
+				<dd class="views">26477 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=401792&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ralfrobert</a>													<a href="./viewtopic.php?t=558451&amp;p=8367438&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367438" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T09:31:00+00:00">Sun Feb 27, 2022 9:31 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=572514&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Audiority Plexitape &amp; Tube Modulator &amp; GR9 / AudioThing Springs / D16 Mod / NI Maschine 2 Update / PSP MixPack2</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=439925&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Lotuz2019</a> &laquo; <a href="./viewtopic.php?t=572514&amp;p=8367435&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367435" title="Go to last post"><time datetime="2022-02-27T09:26:39+00:00">Sun Feb 27, 2022 9:26 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>42</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=439925&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Lotuz2019</a> &raquo; <time datetime="2021-10-29T20:15:26+00:00">Fri Oct 29, 2021 8:15 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=572514&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=572514&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=572514&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30">3</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">42 <dfn>Replies</dfn></dd>
+				<dd class="views">2326 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=439925&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Lotuz2019</a>													<a href="./viewtopic.php?t=572514&amp;p=8367435&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367435" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T09:26:39+00:00">Sun Feb 27, 2022 9:26 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=577993&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Modnetic + Diffuse - 30$ Several Plugin Alliance products for 15$</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=390067&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">jonasnymose</a> &laquo; <a href="./viewtopic.php?t=577993&amp;p=8367432&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367432" title="Go to last post"><time datetime="2022-02-27T09:03:03+00:00">Sun Feb 27, 2022 9:03 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>4</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=390067&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">jonasnymose</a> &raquo; <time datetime="2022-02-15T17:50:04+00:00">Tue Feb 15, 2022 5:50 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">4 <dfn>Replies</dfn></dd>
+				<dd class="views">192 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=390067&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">jonasnymose</a>													<a href="./viewtopic.php?t=577993&amp;p=8367432&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367432" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T09:03:03+00:00">Sun Feb 27, 2022 9:03 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578428&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Never give up, never surrender. Jesus came to me in a dream and said &quot;Melda will sell but the UVI Plate won't&quot;</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=320836&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Michael L</a> &laquo; <a href="./viewtopic.php?t=578428&amp;p=8367430&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367430" title="Go to last post"><time datetime="2022-02-27T08:56:37+00:00">Sun Feb 27, 2022 8:56 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>12</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=443885&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">fairlyclose</a> &raquo; <time datetime="2022-02-23T20:47:27+00:00">Wed Feb 23, 2022 8:47 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">12 <dfn>Replies</dfn></dd>
+				<dd class="views">524 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=320836&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Michael L</a>													<a href="./viewtopic.php?t=578428&amp;p=8367430&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367430" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T08:56:37+00:00">Sun Feb 27, 2022 8:56 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=576365&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">WTB/WTT: V Collection 7/8 FS: Great Plugins (Audient ARC Bundle, Waves Gold, PA, IK, XLN etc.)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=452944&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">cam roll</a> &laquo; <a href="./viewtopic.php?t=576365&amp;p=8367427&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367427" title="Go to last post"><time datetime="2022-02-27T08:48:37+00:00">Sun Feb 27, 2022 8:48 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>15</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=452944&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">cam roll</a> &raquo; <time datetime="2022-01-15T18:39:16+00:00">Sat Jan 15, 2022 6:39 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=576365&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=576365&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">15 <dfn>Replies</dfn></dd>
+				<dd class="views">1135 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=452944&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">cam roll</a>													<a href="./viewtopic.php?t=576365&amp;p=8367427&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367427" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T08:48:37+00:00">Sun Feb 27, 2022 8:48 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578581&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS Sonnox plugins  WTB AOM limiter G2</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=196633&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ktwalker</a> &laquo; <a href="./viewtopic.php?t=578581&amp;p=8367412&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367412" title="Go to last post"><time datetime="2022-02-27T08:04:43+00:00">Sun Feb 27, 2022 8:04 am</time></a>
+													</div>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=196633&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ktwalker</a> &raquo; <time datetime="2022-02-27T08:04:43+00:00">Sun Feb 27, 2022 8:04 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">28 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=196633&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">ktwalker</a>													<a href="./viewtopic.php?t=578581&amp;p=8367412&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367412" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T08:04:43+00:00">Sun Feb 27, 2022 8:04 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578443&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">(FS) Softube Modular</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=547&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">buzzlegs</a> &laquo; <a href="./viewtopic.php?t=578443&amp;p=8367404&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367404" title="Go to last post"><time datetime="2022-02-27T07:41:04+00:00">Sun Feb 27, 2022 7:41 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>1</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=547&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">buzzlegs</a> &raquo; <time datetime="2022-02-24T09:23:57+00:00">Thu Feb 24, 2022 9:23 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">1 <dfn>Replies</dfn></dd>
+				<dd class="views">81 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=547&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">buzzlegs</a>													<a href="./viewtopic.php?t=578443&amp;p=8367404&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367404" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T07:41:04+00:00">Sun Feb 27, 2022 7:41 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=576882&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS- Reason Studio 10 (110 USD)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=296296&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Amram</a> &laquo; <a href="./viewtopic.php?t=576882&amp;p=8367380&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367380" title="Go to last post"><time datetime="2022-02-27T06:23:58+00:00">Sun Feb 27, 2022 6:23 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>12</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=296296&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Amram</a> &raquo; <time datetime="2022-01-24T12:17:38+00:00">Mon Jan 24, 2022 12:17 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">12 <dfn>Replies</dfn></dd>
+				<dd class="views">555 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=296296&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Amram</a>													<a href="./viewtopic.php?t=576882&amp;p=8367380&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367380" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T06:23:58+00:00">Sun Feb 27, 2022 6:23 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=577951&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS/FT: PA DeVerb &amp; MoVerb; CDs Only Komplete 7 &amp; Komplete 8; Amplitube 4 Deluxe (140 models) + extras (Account Transfer)</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a> &laquo; <a href="./viewtopic.php?t=577951&amp;p=8367360&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367360" title="Go to last post"><time datetime="2022-02-27T05:11:57+00:00">Sun Feb 27, 2022 5:11 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>2</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a> &raquo; <time datetime="2022-02-14T21:54:32+00:00">Mon Feb 14, 2022 9:54 pm</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">2 <dfn>Replies</dfn></dd>
+				<dd class="views">143 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a>													<a href="./viewtopic.php?t=577951&amp;p=8367360&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367360" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T05:11:57+00:00">Sun Feb 27, 2022 5:11 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read_locked">
+				<dt title="This topic is locked, you cannot edit posts or make further replies.">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=578580&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">Closed WTB: next 3 hrs only... your $50 or $75 PA voucher</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a> &laquo; <a href="./viewtopic.php?t=578580&amp;p=8367359&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367359" title="Go to last post"><time datetime="2022-02-27T04:59:59+00:00">Sun Feb 27, 2022 4:59 am</time></a>
+													</div>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a> &raquo; <time datetime="2022-02-27T04:59:59+00:00">Sun Feb 27, 2022 4:59 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">0 <dfn>Replies</dfn></dd>
+				<dd class="views">46 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=547111&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Sebastiantheseeker</a>													<a href="./viewtopic.php?t=578580&amp;p=8367359&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367359" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T04:59:59+00:00">Sun Feb 27, 2022 4:59 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=576026&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: Softube Eden WT800/ BX Console N/BlackIce BetaGama bass amp</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=538175&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Vsthound</a> &laquo; <a href="./viewtopic.php?t=576026&amp;p=8367356&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367356" title="Go to last post"><time datetime="2022-02-27T04:49:46+00:00">Sun Feb 27, 2022 4:49 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>16</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=306372&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">CJG007</a> &raquo; <time datetime="2022-01-08T14:47:57+00:00">Sat Jan 08, 2022 2:47 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=576026&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=576026&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">16 <dfn>Replies</dfn></dd>
+				<dd class="views">1229 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=538175&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Vsthound</a>													<a href="./viewtopic.php?t=576026&amp;p=8367356&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367356" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T04:49:46+00:00">Sun Feb 27, 2022 4:49 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=576391&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">AudioThing, Audiority, D16 &amp; much more [Updated 02-27]</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=399995&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">n2077</a> &laquo; <a href="./viewtopic.php?t=576391&amp;p=8367351&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367351" title="Go to last post"><time datetime="2022-02-27T04:25:46+00:00">Sun Feb 27, 2022 4:25 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>5</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=399995&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">n2077</a> &raquo; <time datetime="2022-01-16T04:53:17+00:00">Sun Jan 16, 2022 4:53 am</time>
+																										</div>
+
+						
+											</div>
+				</dt>
+				<dd class="posts">5 <dfn>Replies</dfn></dd>
+				<dd class="views">524 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=399995&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">n2077</a>													<a href="./viewtopic.php?t=576391&amp;p=8367351&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367351" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T04:25:46+00:00">Sun Feb 27, 2022 4:25 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">SSL Native Essentials Bundle v2 and FREE UAD PLUGIN (Refer a friend) SLOTS AVAILABLE PM Please</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=363110&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">FelipeIn</a> &laquo; <a href="./viewtopic.php?t=565579&amp;p=8367330&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367330" title="Go to last post"><time datetime="2022-02-27T02:56:34+00:00">Sun Feb 27, 2022 2:56 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>91</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=363110&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">FelipeIn</a> &raquo; <time datetime="2021-05-22T06:05:37+00:00">Sat May 22, 2021 6:05 am</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30">3</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=45">4</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=60">5</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=75">6</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=565579&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90">7</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">91 <dfn>Replies</dfn></dd>
+				<dd class="views">5482 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=363110&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">FelipeIn</a>													<a href="./viewtopic.php?t=565579&amp;p=8367330&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367330" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T02:56:34+00:00">Sun Feb 27, 2022 2:56 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg1">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=576276&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS - RC-20 Retro Color $40, NI Raum $20, PSP EasyVerb $10, Guda Audio SynthR $25 and More!</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=253968&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alvfaria</a> &laquo; <a href="./viewtopic.php?t=576276&amp;p=8367304&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367304" title="Go to last post"><time datetime="2022-02-27T01:40:24+00:00">Sun Feb 27, 2022 1:40 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>19</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=253968&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alvfaria</a> &raquo; <time datetime="2022-01-13T19:27:13+00:00">Thu Jan 13, 2022 7:27 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=576276&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=576276&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=15">2</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">19 <dfn>Replies</dfn></dd>
+				<dd class="views">1335 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=253968&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">alvfaria</a>													<a href="./viewtopic.php?t=576276&amp;p=8367304&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367304" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T01:40:24+00:00">Sun Feb 27, 2022 1:40 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+	
+
+	
+	
+				<li class="row bg2">
+						<dl class="row-item topic_read_hot">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="topictitle">FS: GForce / Xils-Lab / PSP / Overloud / SSL / SoundToys / D16 / IKM</a>																								<br />
+						
+												<div class="responsive-show" style="display: none;">
+							Last post by <a href="./memberlist.php?mode=viewprofile&amp;u=174353&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trannin</a> &laquo; <a href="./viewtopic.php?t=551335&amp;p=8367283&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367283" title="Go to last post"><time datetime="2022-02-27T00:54:30+00:00">Sun Feb 27, 2022 12:54 am</time></a>
+													</div>
+														<span class="responsive-show left-box" style="display: none;">Replies: <strong>162</strong></span>
+													
+						<div class="topic-poster responsive-hide left-box">
+																												by <a href="./memberlist.php?mode=viewprofile&amp;u=174353&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trannin</a> &raquo; <time datetime="2020-08-23T21:28:32+00:00">Sun Aug 23, 2020 9:28 pm</time>
+																										</div>
+
+												<div class="pagination">
+							<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
+							<ul>
+															<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">1</a></li>
+																							<li class="ellipsis"><span>…</span></li>
+																							<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90">7</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=105">8</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=120">9</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=135">10</a></li>
+																							<li><a class="button" href="./viewtopic.php?t=551335&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=150">11</a></li>
+																																													</ul>
+						</div>
+						
+											</div>
+				</dt>
+				<dd class="posts">162 <dfn>Replies</dfn></dd>
+				<dd class="views">15202 <dfn>Views</dfn></dd>
+				<dd class="lastpost">
+					<span><dfn>Last post </dfn>by <a href="./memberlist.php?mode=viewprofile&amp;u=174353&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="username">Trannin</a>													<a href="./viewtopic.php?t=551335&amp;p=8367283&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06#p8367283" title="Go to last post">
+								<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only"></span>
+							</a>
+												<br /><time datetime="2022-02-27T00:54:30+00:00">Sun Feb 27, 2022 12:54 am</time>
+					</span>
+				</dd>
+			</dl>
+					</li>
+		
+				</ul>
+		</div>
+	</div>
+	
+
+	<div class="action-bar bar-bottom">
+					
+			<a href="./posting.php?mode=post&amp;f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="button" title="Post a new topic">
+							<span>New Topic</span> <i class="icon fa-pencil fa-fw" aria-hidden="true"></i>
+						</a>
+
+					
+					<form method="post" action="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06">
+			<div class="dropdown-container dropdown-container-left dropdown-button-control sort-tools">
+	<span title="Display and sorting options" class="button button-secondary dropdown-trigger dropdown-select">
+		<i class="icon fa-sort-amount-asc fa-fw" aria-hidden="true"></i>
+		<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+	</span>
+	<div class="dropdown">
+		<div class="pointer"><div class="pointer-inner"></div></div>
+		<div class="dropdown-contents">
+			<fieldset class="display-options">
+							<label>Display: <select name="st" id="st"><option value="0" selected="selected">All Topics</option><option value="1">1 day</option><option value="7">7 days</option><option value="14">2 weeks</option><option value="30">1 month</option><option value="90">3 months</option><option value="180">6 months</option><option value="365">1 year</option></select></label>
+								<label>Sort by: <select name="sk" id="sk"><option value="a">Author</option><option value="t" selected="selected">Post time</option><option value="r">Replies</option><option value="s">Subject</option><option value="v">Views</option></select></label>
+				<label>Direction: <select name="sd" id="sd"><option value="a">Ascending</option><option value="d" selected="selected">Descending</option></select></label>
+								<hr class="dashed" />
+				<input type="submit" class="button2" name="sort" value="Go" />
+						</fieldset>
+		</div>
+	</div>
+</div>
+			</form>
+		
+		<div class="pagination">
+						668 topics
+							<ul>
+	<li class="dropdown-container dropdown-button-control dropdown-page-jump page-jump">
+		<a class="button button-icon-only dropdown-trigger" href="#" title="Click to jump to page…" role="button"><i class="icon fa-level-down fa-rotate-270" aria-hidden="true"></i><span class="sr-only">Page <strong>1</strong> of <strong>23</strong></span></a>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+				<li>Jump to page:</li>
+				<li class="page-jump-form">
+					<input type="number" name="page-number" min="1" max="999999" title="Enter the page number you wish to go to" class="inputbox tiny" data-per-page="30" data-base-url=".&#x2F;viewforum.php&#x3F;f&#x3D;43&amp;amp&#x3B;sid&#x3D;6dab6250a3a1333b56c5c1c37fa2ce06" data-start-name="start" />
+					<input class="button2" value="Go" type="button" />
+				</li>
+			</ul>
+		</div>
+	</li>
+		<li class="active"><span>1</span></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30" role="button">2</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=60" role="button">3</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=90" role="button">4</a></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=120" role="button">5</a></li>
+			<li class="ellipsis" role="separator"><span>…</span></li>
+				<li><a class="button" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=660" role="button">23</a></li>
+				<li class="arrow next"><a class="button button-icon-only" href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06&amp;start=30" rel="next" role="button"><i class="icon fa-chevron-right fa-fw" aria-hidden="true"></i><span class="sr-only">Next</span></a></li>
+	</ul>
+					</div>
+	</div>
+
+
+<div class="action-bar actions-jump">
+		<p class="jumpbox-return">
+		<a href="./index.php?sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="left-box arrow-left" accesskey="r">
+			<i class="icon fa-angle-left fa-fw icon-black" aria-hidden="true"></i><span>Return to Board Index</span>
+		</a>
+	</p>
+	
+		<div class="jumpbox dropdown-container dropdown-container-right dropdown-up dropdown-left dropdown-button-control" id="jumpbox">
+			<span title="Jump to" class="button button-secondary dropdown-trigger dropdown-select">
+				<span>Jump to</span>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+		<div class="dropdown">
+			<div class="pointer"><div class="pointer-inner"></div></div>
+			<ul class="dropdown-contents">
+																				<li><a href="./viewforum.php?f=253&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-cat-link"> <span> The Main Forums</span></a></li>
+																<li><a href="./viewforum.php?f=290&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; KVR Experts</span></a></li>
+																<li><a href="./viewforum.php?f=74&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Getting Started (AKA What is the best...?)</span></a></li>
+																<li><a href="./viewforum.php?f=1&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Instruments</span></a></li>
+																<li><a href="./viewforum.php?f=6&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Effects</span></a></li>
+																<li><a href="./viewforum.php?f=7&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hosts &amp; Applications (Sequencers, DAWs, Audio Editors, etc.)</span></a></li>
+																<li><a href="./viewforum.php?f=298&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Guitars</span></a></li>
+																<li><a href="./viewforum.php?f=166&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Mobile Apps and Hardware</span></a></li>
+																<li><a href="./viewforum.php?f=257&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Soundware</span></a></li>
+																<li><a href="./viewforum.php?f=42&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Samplers, Sampling &amp; Sample Libraries</span></a></li>
+																<li><a href="./viewforum.php?f=102&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hardware (Instruments and Effects)</span></a></li>
+																<li><a href="./viewforum.php?f=23&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Modular Synthesis</span></a></li>
+																<li><a href="./viewforum.php?f=100&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sound Design</span></a></li>
+																<li><a href="./viewforum.php?f=62&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Production Techniques</span></a></li>
+																<li><a href="./viewforum.php?f=99&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Music Theory</span></a></li>
+																<li><a href="./viewforum.php?f=16&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Computer Setup and System Configuration</span></a></li>
+																<li><a href="./viewforum.php?f=33&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; DSP and Plug-in Development</span></a></li>
+																<li><a href="./viewforum.php?f=180&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; DIY: Build it and they will come</span></a></li>
+																<li><a href="./viewforum.php?f=14&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Music Cafe</span></a></li>
+																<li><a href="./viewforum.php?f=43&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sell &amp; Buy (+Special Offers, Deals &amp; Promos)</span></a></li>
+																<li><a href="./viewforum.php?f=91&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; KVR Developer Challenge 2021</span></a></li>
+																<li><a href="./viewforum.php?f=4&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Everything Else (Music related)</span></a></li>
+																<li><a href="./viewforum.php?f=15&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Off Topic</span></a></li>
+																<li><a href="./viewforum.php?f=70&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Off Topic Classics</span></a></li>
+																<li><a href="./viewforum.php?f=255&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-cat-link"> <span> Official Company Forums</span></a></li>
+																<li><a href="./viewforum.php?f=295&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; 2getheraudio</span></a></li>
+																<li><a href="./viewforum.php?f=247&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AbstractCatsSD</span></a></li>
+																<li><a href="./viewforum.php?f=57&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; accSone</span></a></li>
+																<li><a href="./viewforum.php?f=218&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Acon Digital</span></a></li>
+																<li><a href="./viewforum.php?f=162&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AcousticsampleS</span></a></li>
+																<li><a href="./viewforum.php?f=59&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AcousModules</span></a></li>
+																<li><a href="./viewforum.php?f=105&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Agitated State</span></a></li>
+																<li><a href="./viewforum.php?f=265&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AIR Music Technology</span></a></li>
+																<li><a href="./viewforum.php?f=142&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AMG</span></a></li>
+																<li><a href="./viewforum.php?f=245&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ample Sound</span></a></li>
+																<li><a href="./viewforum.php?f=308&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Antares Audio Technologies</span></a></li>
+																<li><a href="./viewforum.php?f=304&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Apisonic Labs</span></a></li>
+																<li><a href="./viewforum.php?f=283&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; apulSoft</span></a></li>
+																<li><a href="./viewforum.php?f=143&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AriesCode</span></a></li>
+																<li><a href="./viewforum.php?f=60&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Arts Acoustic</span></a></li>
+																<li><a href="./viewforum.php?f=224&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Arturia</span></a></li>
+																<li><a href="./viewforum.php?f=171&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; audioD3CK</span></a></li>
+																<li><a href="./viewforum.php?f=135&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Audjoo</span></a></li>
+																<li><a href="./viewforum.php?f=154&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AudioSpillage</span></a></li>
+																<li><a href="./viewforum.php?f=177&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Audiority</span></a></li>
+																<li><a href="./viewforum.php?f=67&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Back In Time Records</span></a></li>
+																<li><a href="./viewforum.php?f=199&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Best Service</span></a></li>
+																<li><a href="./viewforum.php?f=18&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Big Tick</span></a></li>
+																<li><a href="./viewforum.php?f=259&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bitwig</span></a></li>
+																<li><a href="./viewforum.php?f=268&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Controller Scripting</span></a></li>
+																<li><a href="./viewforum.php?f=52&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Blue Cat Audio</span></a></li>
+																<li><a href="./viewforum.php?f=158&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; CFA-Sound</span></a></li>
+																<li><a href="./viewforum.php?f=296&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cherry Audio</span></a></li>
+																<li><a href="./viewforum.php?f=184&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; CK Modules &amp; VST</span></a></li>
+																<li><a href="./viewforum.php?f=272&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Cmusic Production</span></a></li>
+																<li><a href="./viewforum.php?f=213&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; CWITEC</span></a></li>
+																<li><a href="./viewforum.php?f=276&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; discoDSP</span></a></li>
+																<li><a href="./viewforum.php?f=191&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; DISTRHO</span></a></li>
+																<li><a href="./viewforum.php?f=235&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Drumdrops</span></a></li>
+																<li><a href="./viewforum.php?f=216&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Embertone</span></a></li>
+																<li><a href="./viewforum.php?f=306&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Embody</span></a></li>
+																<li><a href="./viewforum.php?f=307&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Empirical Labs</span></a></li>
+																<li><a href="./viewforum.php?f=36&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; energyXT</span></a></li>
+																<li><a href="./viewforum.php?f=299&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Eventide</span></a></li>
+																<li><a href="./viewforum.php?f=85&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Expert Sleepers</span></a></li>
+																<li><a href="./viewforum.php?f=164&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; forward audio</span></a></li>
+																<li><a href="./viewforum.php?f=233&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Futucraft</span></a></li>
+																<li><a href="./viewforum.php?f=260&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Future Audio Workshop</span></a></li>
+																<li><a href="./viewforum.php?f=13&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; FXpansion</span></a></li>
+																<li><a href="./viewforum.php?f=203&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; g200kg</span></a></li>
+																<li><a href="./viewforum.php?f=150&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; H.E. Audio</span></a></li>
+																<li><a href="./viewforum.php?f=274&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Harrison Mixbus</span></a></li>
+																<li><a href="./viewforum.php?f=149&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; HG Fortune</span></a></li>
+																<li><a href="./viewforum.php?f=151&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Hollow Sun</span></a></li>
+																<li><a href="./viewforum.php?f=133&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Homegrown Sounds</span></a></li>
+																<li><a href="./viewforum.php?f=226&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ilya Efimov Production</span></a></li>
+																<li><a href="./viewforum.php?f=86&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Image Line</span></a></li>
+																<li><a href="./viewforum.php?f=176&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Impact Soundworks</span></a></li>
+																<li><a href="./viewforum.php?f=157&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Indiginus</span></a></li>
+																<li><a href="./viewforum.php?f=148&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Insert Piz Here</span></a></li>
+																<li><a href="./viewforum.php?f=204&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Inspire Audio</span></a></li>
+																<li><a href="./viewforum.php?f=280&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ju-X</span></a></li>
+																<li><a href="./viewforum.php?f=225&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kirk Hunter Studios</span></a></li>
+																<li><a href="./viewforum.php?f=229&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kirnu</span></a></li>
+																<li><a href="./viewforum.php?f=64&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kong Audio</span></a></li>
+																<li><a href="./viewforum.php?f=130&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Krakli</span></a></li>
+																<li><a href="./viewforum.php?f=249&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Krotos</span></a></li>
+																<li><a href="./viewforum.php?f=160&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kuassa</span></a></li>
+																<li><a href="./viewforum.php?f=98&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; KV331 Audio</span></a></li>
+																<li><a href="./viewforum.php?f=278&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Le Sound By AudioGaming</span></a></li>
+																<li><a href="./viewforum.php?f=94&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LennarDigital</span></a></li>
+																<li><a href="./viewforum.php?f=58&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Les Productions Zvon</span></a></li>
+																<li><a href="./viewforum.php?f=236&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Liqube</span></a></li>
+																<li><a href="./viewforum.php?f=72&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Livelab.dk</span></a></li>
+																<li><a href="./viewforum.php?f=141&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Loomer</span></a></li>
+																<li><a href="./viewforum.php?f=223&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LVC-Audio</span></a></li>
+																<li><a href="./viewforum.php?f=113&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Maizesoft</span></a></li>
+																<li><a href="./viewforum.php?f=56&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Manytone Music</span></a></li>
+																<li><a href="./viewforum.php?f=138&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MeldaProduction</span></a></li>
+																<li><a href="./viewforum.php?f=305&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Mellowmuse</span></a></li>
+																<li><a href="./viewforum.php?f=289&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MIDIMood</span></a></li>
+																<li><a href="./viewforum.php?f=269&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Mozaic Beats</span></a></li>
+																<li><a href="./viewforum.php?f=163&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; mucoder</span></a></li>
+																<li><a href="./viewforum.php?f=11&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Muon Software</span></a></li>
+																<li><a href="./viewforum.php?f=168&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MusicDevelopments</span></a></li>
+																<li><a href="./viewforum.php?f=285&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; Tips &amp; Tricks</span></a></li>
+																<li><a href="./viewforum.php?f=181&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MusicLab</span></a></li>
+																<li><a href="./viewforum.php?f=79&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MUTOOLS</span></a></li>
+																<li><a href="./viewforum.php?f=300&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; New Sonic Arts</span></a></li>
+																<li><a href="./viewforum.php?f=29&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; NUSofting</span></a></li>
+																<li><a href="./viewforum.php?f=186&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Oli Larkin Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=139&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Orange Tree Samples</span></a></li>
+																<li><a href="./viewforum.php?f=212&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; OverTone DSP</span></a></li>
+																<li><a href="./viewforum.php?f=200&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; patchpool</span></a></li>
+																<li><a href="./viewforum.php?f=215&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; patchwerkz</span></a></li>
+																<li><a href="./viewforum.php?f=155&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Photosounder</span></a></li>
+																<li><a href="./viewforum.php?f=205&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; PlugInGuru</span></a></li>
+																<li><a href="./viewforum.php?f=297&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Polyverse Music</span></a></li>
+																<li><a href="./viewforum.php?f=65&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Precisionsound</span></a></li>
+																<li><a href="./viewforum.php?f=288&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Premier Sound Factory</span></a></li>
+																<li><a href="./viewforum.php?f=78&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Psychic Modulation</span></a></li>
+																<li><a href="./viewforum.php?f=250&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; RaXnTraX</span></a></li>
+																<li><a href="./viewforum.php?f=243&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Realitone</span></a></li>
+																<li><a href="./viewforum.php?f=190&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Resonance-Sound</span></a></li>
+																<li><a href="./viewforum.php?f=248&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Reveal Sound</span></a></li>
+																<li><a href="./viewforum.php?f=263&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Roger Linn Design</span></a></li>
+																<li><a href="./viewforum.php?f=129&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; rs-met</span></a></li>
+																<li><a href="./viewforum.php?f=301&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; S3A: Spatial Audio</span></a></li>
+																<li><a href="./viewforum.php?f=282&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SaschArt</span></a></li>
+																<li><a href="./viewforum.php?f=294&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sennheiser AMBEO</span></a></li>
+																<li><a href="./viewforum.php?f=246&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Signaldust</span></a></li>
+																<li><a href="./viewforum.php?f=219&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Skytopia</span></a></li>
+																<li><a href="./viewforum.php?f=24&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Smart Electronix</span></a></li>
+																<li><a href="./viewforum.php?f=261&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; solar3d-software</span></a></li>
+																<li><a href="./viewforum.php?f=286&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; sonible</span></a></li>
+																<li><a href="./viewforum.php?f=124&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SonicBirth</span></a></li>
+																<li><a href="./viewforum.php?f=9&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sonic Reality / eSoundz.com</span></a></li>
+																<li><a href="./viewforum.php?f=178&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sonigen</span></a></li>
+																<li><a href="./viewforum.php?f=238&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Soundemote</span></a></li>
+																<li><a href="./viewforum.php?f=202&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Soundiron</span></a></li>
+																<li><a href="./viewforum.php?f=291&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SPC Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=270&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Squaredheads</span></a></li>
+																<li><a href="./viewforum.php?f=108&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sugar Bytes</span></a></li>
+																<li><a href="./viewforum.php?f=165&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; TAL Software</span></a></li>
+																<li><a href="./viewforum.php?f=210&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tokyo Dawn Labs</span></a></li>
+																<li><a href="./viewforum.php?f=22&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tracktion</span></a></li>
+																<li><a href="./viewforum.php?f=277&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Twisted Tools</span></a></li>
+																<li><a href="./viewforum.php?f=31&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; u-he</span></a></li>
+																<li><a href="./viewforum.php?f=292&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span><span class="spacer"></span> <span>&#8627; &nbsp; u-he Linux support</span></a></li>
+																<li><a href="./viewforum.php?f=303&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; United Plugins</span></a></li>
+																<li><a href="./viewforum.php?f=147&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; VAZ Synths</span></a></li>
+																<li><a href="./viewforum.php?f=252&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Virharmonic</span></a></li>
+																<li><a href="./viewforum.php?f=201&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Westgatesounds.net</span></a></li>
+																<li><a href="./viewforum.php?f=251&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Wolfgang Palm</span></a></li>
+																<li><a href="./viewforum.php?f=125&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; xoxos</span></a></li>
+																<li><a href="./viewforum.php?f=47&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; ZynAddSubFX</span></a></li>
+																<li><a href="./viewforum.php?f=256&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-cat-link"> <span> Site Stuff</span></a></li>
+																<li><a href="./viewforum.php?f=2&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Site Stuff</span></a></li>
+																<li><a href="./viewforum.php?f=262&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-cat-link"> <span> Archived Forums</span></a></li>
+																<li><a href="./viewforum.php?f=44&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AlgoMusic</span></a></li>
+																<li><a href="./viewforum.php?f=90&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Soniccouture</span></a></li>
+																<li><a href="./viewforum.php?f=267&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kazrog</span></a></li>
+																<li><a href="./viewforum.php?f=146&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Valhalla DSP</span></a></li>
+																<li><a href="./viewforum.php?f=10&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; LinPlug</span></a></li>
+																<li><a href="./viewforum.php?f=45&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Muse Research and Development</span></a></li>
+																<li><a href="./viewforum.php?f=293&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sarah's Tips</span></a></li>
+																<li><a href="./viewforum.php?f=244&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Good Loops</span></a></li>
+																<li><a href="./viewforum.php?f=122&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Humanoid Sound Systems</span></a></li>
+																<li><a href="./viewforum.php?f=92&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; In Session Audio</span></a></li>
+																<li><a href="./viewforum.php?f=197&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; JoBroMedia</span></a></li>
+																<li><a href="./viewforum.php?f=222&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Kiss-Box</span></a></li>
+																<li><a href="./viewforum.php?f=156&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; linuxDSP</span></a></li>
+																<li><a href="./viewforum.php?f=159&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Little Endian</span></a></li>
+																<li><a href="./viewforum.php?f=284&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Lucidsamples</span></a></li>
+																<li><a href="./viewforum.php?f=279&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Maestro Music Software</span></a></li>
+																<li><a href="./viewforum.php?f=211&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; MKDR</span></a></li>
+																<li><a href="./viewforum.php?f=114&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Nucleus SoundLab</span></a></li>
+																<li><a href="./viewforum.php?f=185&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; realsamples</span></a></li>
+																<li><a href="./viewforum.php?f=234&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Saltline</span></a></li>
+																<li><a href="./viewforum.php?f=77&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Sample Squad</span></a></li>
+																<li><a href="./viewforum.php?f=109&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; AraldFX</span></a></li>
+																<li><a href="./viewforum.php?f=220&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Audio Poison</span></a></li>
+																<li><a href="./viewforum.php?f=281&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Aviram Dayan Production</span></a></li>
+																<li><a href="./viewforum.php?f=97&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Bornemark</span></a></li>
+																<li><a href="./viewforum.php?f=206&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Citron Instruments</span></a></li>
+																<li><a href="./viewforum.php?f=170&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Dangerous Bear Underground</span></a></li>
+																<li><a href="./viewforum.php?f=266&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Don't Panic Studios</span></a></li>
+																<li><a href="./viewforum.php?f=128&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; easytoolz</span></a></li>
+																<li><a href="./viewforum.php?f=264&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; ELBySoniQ</span></a></li>
+																<li><a href="./viewforum.php?f=53&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Elevayta</span></a></li>
+																<li><a href="./viewforum.php?f=214&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; ePipes</span></a></li>
+																<li><a href="./viewforum.php?f=132&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Human Touch Technology</span></a></li>
+																<li><a href="./viewforum.php?f=287&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; lmdsp</span></a></li>
+																<li><a href="./viewforum.php?f=230&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Samplephonics</span></a></li>
+																<li><a href="./viewforum.php?f=101&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Shuriken</span></a></li>
+																<li><a href="./viewforum.php?f=69&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SoHa Sound Design</span></a></li>
+																<li><a href="./viewforum.php?f=198&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; SoulViaSound UG</span></a></li>
+																<li><a href="./viewforum.php?f=123&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Spectralhead Audio</span></a></li>
+																<li><a href="./viewforum.php?f=134&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Supersynths</span></a></li>
+																<li><a href="./viewforum.php?f=208&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Studio Toolz</span></a></li>
+																<li><a href="./viewforum.php?f=192&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Straightarrow</span></a></li>
+																<li><a href="./viewforum.php?f=242&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; StrayWorx</span></a></li>
+																<li><a href="./viewforum.php?f=195&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; stw-audio</span></a></li>
+																<li><a href="./viewforum.php?f=161&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Subatomic Labs</span></a></li>
+																<li><a href="./viewforum.php?f=241&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Syntone</span></a></li>
+																<li><a href="./viewforum.php?f=240&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Teragon Audio</span></a></li>
+																<li><a href="./viewforum.php?f=275&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Synchro Arts</span></a></li>
+																<li><a href="./viewforum.php?f=136&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Topten Software</span></a></li>
+																<li><a href="./viewforum.php?f=89&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Tweakbench</span></a></li>
+																<li><a href="./viewforum.php?f=117&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; Ugo</span></a></li>
+																<li><a href="./viewforum.php?f=239&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; VSTForx</span></a></li>
+																<li><a href="./viewforum.php?f=237&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; My KVR Beta</span></a></li>
+																<li><a href="./viewforum.php?f=175&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" class="jumpbox-sub-link"><span class="spacer"></span> <span>&#8627; &nbsp; e-instruments</span></a></li>
+											</ul>
+		</div>
+	</div>
+
+	</div>
+
+
+
+	<div class="stat-block permissions">
+		<h3>Forum permissions</h3>
+		<p>You <strong>cannot</strong> post new topics in this forum<br />You <strong>cannot</strong> reply to topics in this forum<br />You <strong>cannot</strong> edit your posts in this forum<br />You <strong>cannot</strong> delete your posts in this forum<br />You <strong>cannot</strong> post attachments in this forum<br /></p>
+	</div>
+
+			</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="./index.php?sid=6dab6250a3a1333b56c5c1c37fa2ce06" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>KVR Forum index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+														</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				<p class="footer-row">
+			<span class="footer-copyright">Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited</span>
+		</p>
+						<p class="footer-row" role="menu">
+			<a class="footer-link" href="./ucp.php?mode=privacy&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" title="Privacy" role="menuitem">
+				<span class="footer-link-text">Privacy</span>
+			</a>
+			|
+			<a class="footer-link" href="./ucp.php?mode=terms&amp;sid=6dab6250a3a1333b56c5c1c37fa2ce06" title="Terms" role="menuitem">
+				<span class="footer-link-text">Terms</span>
+			</a>
+		</p>
+					</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div>
+
+</div>
+
+<div>
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	</div>
+
+<script src="./assets/javascript/core.js?assets_version=173"></script>
+
+
+
+<script src="./styles/prosilver/template/forum_fn.js?assets_version=173"></script>
+<script src="./styles/prosilver/template/ajax.js?assets_version=173"></script>
+
+
+</div>
+    <div id="subcol">
+      <div class="flex posrelit" style="overflow: hidden;"><span class="featured-badge-lowkey" style="background-color: transparent; top: 0; left: initial; right: 0; color: #777;">FEATURED</span><div class="kvrpbox posrelit" data-s="0" data-p="taip" data-u="" data-c="" data-i="22142" data-dlid="22142"><span class="kvr-p-off">43% Off</span><div class="kvrpbox1 flex flexcolumn hovthisblue"><a class="kvrpboxa posrelit flex flexcolumn" data-i="22142" href="/more/5559-1" title="TAIP"><span class="kvrpboximg flexflexed" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);" data-kvrsrc="https://static.kvraudio.com/i/m/taip_gui_shot_-_gray.jpg"></span><span class="kvrpboxt"><strong class="kvrpboxn">TAIP</strong><span class="kvrpboxtags">Tape Emulation<br> by BABY Audio</span><span class="kvrpboxd flex flexwrap"><span class="spita2 flex flexflexed flexcenter flexwrap"><span title="macOS" class="spit sp3s">&nbsp;</span><span title="Windows" class="spit sp1s">&nbsp;</span></span><span class="flexflexed flex flexcenter flexcontentend">$39.00</span></span></span></a><div class="flex flexcenter flexcontentend"><a href="/product/taip-by-baby-audio/reviews" class="flex flexcontentcenter flexflexed" style="margin: 0 5px; padding: 5px;" title="Read Reviews" aria-label="Read reviews for TAIP"><span class="flexflexed flex flexcontentcenter flexcenter"><span class="spit spstar spstarg"></span><span class="spit spstar spstarg"></span><span class="spit spstar spstarg"></span><span class="spit spstar spstarg"></span><span class="spit spstar spstarg"></span></span></a><a href="/inc/a.php?w=review&amp;product_id=22142" class="flexflexed kvr-fetch-n-display not-full-cover" data-func="kvr_ckeditor_in_fetch_init" data-args='[{"editor": "revieweditor", "func":"kvr_star_hover", "fixheight": "true"}]' data-requires="ckeditor4171c/ckeditor.js" style="padding: 5px; margin: 5px; color: #36c;">Add A Review</a><span class="flexfixed" style="padding: 5px;"><span class="mykvr-loz"><span data-id="22142" class="mykvr pid22142 inrelblock " title="My KVR Groups"><span class="spit mykvrp spstarg" data-id="22142" data-a="1" title="My KVR Favourite Product"><span>&nbsp;</span></span>My KVR</span></span></span></div><span class="svk_offer_line hideflex">Was $69.00; Save $30.00 until 02 Mar 2022</span><div class="kvrshopboxbuybox nowrap hovthisblue flex flexcenter posrelit"><div class="flex flexflexed flexselfstretch" style="z-index: 1;"><a href="/marketplace/taip-by-baby-audio" title="View in the KVR Marketplace" class="flex flexcenter flexflexed flexcontentcenter flexselfstretch" aria-label="View TAIP in the KVR Marketplace"><span class="spit spmplogo" style="background-position: 2px -589px; background-color: #333; border-radius: 3px; padding: 5px !important;"></span></a></div><div class="flex flexflexed" style="z-index: 1;"><a href="#" class="buyatkvr flex flexcenter flexflexed flexcontentcenter" data-id="22142" data-spid="5577" data-product="TAIP" data-brand="BABY Audio" data-price="39.00" data-cat="Tape Emulation" style="font-size: 13px;"><span class="sellingprice flex flexcenter flexfixed" style="padding: 5px 10px; margin-right: 5px; border-width: 0; background-color: #83a93a; border-radius: 3px; color: #fff;">$39.00</span><span class="buynowtext" style="background-color: #36c; padding: 5px 10px; color: #fff; border-radius: 3px; min-width: 30px;">Buy</span></a></div><span class="inkvrshop" data-i="22142" data-spid="5577" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0;"><span class="kartinmy flex flexcenter flexcontentcenter flexnoneimp" style="line-height: normal; padding: 10px; box-shadow: none; height: 100%;"><span class="flexflexed"><span class="spit sptick flexfixed">&nbsp;</span><span style="margin: 0 5px;">BUYING!</span><span data-id="22142" data-spid="5577" data-product="TAIP" data-brand="BABY Audio" data-price="39.00" data-cat="Tape Emulation" class="kvrdelfromcart flexfixed" title="Remove from cart" style="padding: 2px 4px; border-radius: 3px;">X</span></span><span class="flexflexed" style="margin-left: 20px; max-width: 150px;"><a href="/marketplace/checkout/" style="display: block; background-color: #36c; text-shadow: none; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; color: #fff !important; padding: 5px 0; line-height: 16px; border-radius: 3px;">Checkout</a></span></span></span></div></div></div></div>
+      <div id="div-gpt-ad-1319706183506-2" class="bl0k300250"><script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1319706183506-2'); });</script></div>
+      <div class="kvrcbox kvrmarkhideable kvrmidcen len43"><div class="hovthisblueop" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);" data-kvrsrc="https://i.ytimg.com/vi/7r-3hlzpV7M/mqdefault.jpg"><a href="/video/sisters-with-transistors-official-trailer-17551/1/5545" title="Sisters with Transistors [Official Trailer]"><span class="featured-badge-leftbot">Featured</span><span class="flex"><span class="kvrvideoboxplay"><span class="spit sptriangleright"></span></span></span></a></div><div class="kvrmarkable"><a href="/video/sisters-with-transistors-official-trailer-17551/1/5545" title="Sisters with Transistors [Official Trailer]" class="clamp4lines">Sisters with Transistors [Official Trailer]</a></div></div>
+      <div id="kvr_mp_scroller"><a href="/marketplace/" title="KVR Audio Plug-in Marketplace" class="kvrmp-overlay-logo shaditpopup" aria-label="KVR Marketplace"></a><div class="kvrmpompfmpp overlayindicators closerindicators"><div class="kvrshinyscroller flex" style="border-radius: 5px;"><a href="/more/5550-1" title="Sound Forge Pro" class="block-300250-rel" style="text-align: center; background: url(https://static.kvraudio.com/i/m/magix_sound-forge-pro-14_int_screen-mastering_rgb.png) center center / cover;"><span class="bottom-overlay-darkbg"><span style="font-weight: bold; font-size: 125%;">Sound Forge Pro</span><br>Audio Editor<br>by MAGIX</span><span class="kvrmp-discount-circle">50%<br>Off</span></a><a href="/more/5504-1" title="M-Tron MkII" class="block-300250-rel" style="text-align: center; background: url(https://static.kvraudio.com/i/m/gforce_m-tron_mkii_-_large.png) center center / cover;"><span class="bottom-overlay-darkbg"><span style="font-weight: bold; font-size: 125%;">M-Tron MkII</span><br>mellotron MkII<br>by GForce Software</span><span class="kvrmp-discount-circle">20%<br>Off</span></a><a href="/more/5515-1" title="Silk" class="block-300250-rel" style="text-align: center; background: url(https://static.kvraudio.com/i/m/silk_vi-screenshot_42x.png) center center / cover;"><span class="bottom-overlay-darkbg"><span style="font-weight: bold; font-size: 125%;">Silk</span><br>World<br>by EastWest</span><span class="kvrmp-discount-circle">60%<br>Off</span></a><a href="/more/5555-1" title="PitchMap" class="block-300250-rel" style="text-align: center; background: url(https://static.kvraudio.com/i/m/zynaptiq_pitchmap_150_screensh.png) center center / cover;"><span class="bottom-overlay-darkbg"><span style="font-weight: bold; font-size: 125%;">PitchMap</span><br>Pitch Correction / Mapping<br>by Zynaptiq</span><span class="kvrmp-discount-circle">74%<br>Off</span></a><a href="/more/5526-1" title="Auto-Tune Access" class="block-300250-rel" style="text-align: center; background: url(https://static.kvraudio.com/i/m/access-triple-panel.png) center top / cover;"><span class="bottom-overlay-darkbg"><span style="font-weight: bold; font-size: 125%;">Auto-Tune Access</span><br>Pitch Correction / Auto-tuning<br>by Antares Audio Technologies</span><span class="kvrmp-discount-circle">50%<br>Off</span></a></div></div></div><script>kvrshinyscroller({"selector" : ".kvrmpompfmpp", "interval" : 15000, "showindicators" : true});</script>
+      <div class="kvriib overlayindicators closerindicators"><div class="kvrshinyscroller flex" id="kvr_focus_scroller" style="border-radius: 5px;"><a href="/interviews/sowing-the-seeds-for-todays-electronic-music-an-interview-with-jon-appleton-28724" title="Sowing the Seeds for Today's Electronic Music: An Interview with Jon Appleton" class="block-300250-rel"><img src="https://static.kvraudio.com/i/b/jon-apple-300x250.jpg" alt="Sowing the Seeds for Today's Electronic Music: An Interview with Jon Appleton" class="block-300250-rel" width="300" height="250"></a><a href="/interviews/cutting-edge-technology-meets-cutting-edge-craft-an-interview-with-jordan-rudess-40790" title="Cutting Edge Technology meets Cutting Edge Craft: An interview with Jordan Rudess" class="block-300250-rel"><img src="https://static.kvraudio.com/i/b/jordan-rudess-cutting-edge.jpg" alt="Cutting Edge Technology meets Cutting Edge Craft: An interview with Jordan Rudess" class="block-300250-rel" width="300" height="250"></a><a href="/interviews/an-interview-with-tom-oberheim---from-boom-to-bust-to-boom-part-1-34402" title="An Interview with Tom Oberheim - From Boom to Bust to Boom (Part 1)" class="block-300250-rel"><img src="https://static.kvraudio.com/i/b/tom-oberheim-300x250-pt1.jpg" alt="An Interview with Tom Oberheim - From Boom to Bust to Boom (Part 1)" class="block-300250-rel" width="300" height="250"></a><a href="/interviews/-52060" title="Artist Focus: Composer Gregory Reveret's Plugin Highlights" class="block-300250-rel"><img src="https://static.kvraudio.com/i/b/greggory_reveret_pic3sml.jpg" alt="Artist Focus: Composer Gregory Reveret's Plugin Highlights" class="block-300250-rel" width="300" height="250"></a><a href="/interviews/the-phoenix-rises-tom-oberheim-interview-part-2-34526" title="The Phoenix Rises: Tom Oberheim Interview Part 2" class="block-300250-rel"><img src="https://static.kvraudio.com/i/b/tom-oberheim-300x250-pt2.jpg" alt="The Phoenix Rises: Tom Oberheim Interview Part 2" class="block-300250-rel" width="300" height="250"></a></div></div><script>kvrshinyscroller({"selector" : ".kvriib", "interval" : 12000, "showindicators" : true});</script>
+      <div id="wnaside">
+      <div id="sidecolx"><div><div id="scxtitle"><strong>What's New @ KVR Audio</strong></div><div class="flex" style="justify-content: space-around; font-family: open sans; text-transform: uppercase; font-size: 0.8rem; overflow: hidden;"><a href="/inc/sidebar.php?s=2" class="kvr-fetch-link" aria-label="What's New Plugins Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="kvr6to9show"><span class="spit spbox">&nbsp;</span></span><span class="kvr6to9hide">Plugins</span></a><a href="/inc/sidebar.php?s=1" class="kvr-fetch-link" aria-label="What's New News Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="kvr6to9show"><span class="spit spnews">&nbsp;</span></span><span class="kvr6to9hide">News</span></a><a href="/inc/sidebar.php?s=7" class="kvr-fetch-link" aria-label="What's New Deals Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="kvr6to9show"><span class="spit spnews">&nbsp;</span></span><span class="kvr6to9hide">Deals</span></a><a href="/inc/sidebar.php?s=3" class="kvr-fetch-link wna-on" aria-label="What's New Reviews Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="kvr6to9show"><span class="spit sprevpad">&nbsp;</span></span><span class="kvr6to9hide">Reviews</span></a><a href="/inc/sidebar.php?s=4" class="kvr-fetch-link" aria-label="What's New Forum Posts Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="spit spfrm" title="Latest Forum Posts">&nbsp;</span></a><a href="/inc/sidebar.php?s=5" class="kvr-fetch-link" aria-label="What's New Music Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="spit spplm16o" title="Latest Music">&nbsp;</span></a><a href="/inc/sidebar.php?s=6" class="kvr-fetch-link" aria-label="What's New Videos Tab" data-target="#scxbox" data-clstoggle="wna-on" style="padding: 5px; border-radius: 5px;"><span class="spit sptv" title="Latest Videos">&nbsp;</span></a></div></div><div id="scxcon" class="spitb2"><div id="scxbox" class="scxp"><div class="scxpinline flex flexcenter" style="padding: 5px 7px 5px 10px;"><a href="https://www.kvraudio.com/reviews"><b>Latest User Reviews</b></a> <a href="/rss/kvr_user_reviews.rss" title="Latest User Reviews RSS Feed" style="padding: 0; margin: 0 0 0 auto; width: 25px; height: 25px;" aria-label="Latest User Reviews RSS Feed"><span class="spit sprss2">&nbsp;</span></a></div><a href="/product/wusik-zr-by-wusik/reviews/8040" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/wusik_zr_plusplusplus.png"></span><span class="flexflexed">Wusik ZR<br><span class="scxpsub">Rated 1 out of 5 by cyrb<br><em>27th February</em></span></span></a><a href="/product/echolive-by-the-interruptor/reviews/8039" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/echolive.jpg"></span><span class="flexflexed">EchoLive<br><span class="scxpsub">Rated 5 out of 5 by neilslade<br><em>27th February</em></span></span></a><a href="/product/axon-by-audio-damage/reviews/8037" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/axon.jpg"></span><span class="flexflexed">Axon<br><span class="scxpsub">Rated 4 out of 5 by marcoose777<br><em>26th February</em></span></span></a><a href="/product/xpand-2-by-air-music-technology/reviews/8036" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/xpand2_weblarge.jpg"></span><span class="flexflexed">Xpand!2<br><span class="scxpsub">Rated 4 out of 5 by Starship Krupa<br><em>26th February</em></span></span></a><a href="/product/vacuum-pro-by-air-music-technology/reviews/8035" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/vacuumpro_weblarge.jpg"></span><span class="flexflexed">Vacuum Pro<br><span class="scxpsub">Rated 4 out of 5 by Starship Krupa<br><em>26th February</em></span></span></a><a href="/product/bamboomba-by-way-music/reviews/8034" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/bamboomba-closer_150dpi.jpg"></span><span class="flexflexed">BamBoomBa<br><span class="scxpsub">Rated 5 out of 5 by jamesd256<br><em>26th February</em></span></span></a><a href="/product/p42-climax-line-amp-by-pulsar-novation/reviews/8033" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/emulation_of_the_a-12j_input_transformer.1637224604.png"></span><span class="flexflexed">P42 Climax Line Amp<br><span class="scxpsub">Rated 4 out of 5 by lriv5<br><em>26th February</em></span></span></a><a href="/product/convolver-by-kilohearts/reviews/8032" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/convolver_full.png"></span><span class="flexflexed">Convolver<br><span class="scxpsub">Rated 4 out of 5 by Fraggle<br><em>26th February</em></span></span></a><a href="/product/xsrdo-patchwork-modular-system-by-xsrdo/reviews/8031" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/promo1.png"></span><span class="flexflexed">XSRDO Patchwork Modular System<br><span class="scxpsub">Rated 3 out of 5 by cyrb<br><em>25th February</em></span></span></a><a href="/product/parallels-by-softube/reviews/8030" class="flex"><span class="flexfixed" style="width: 50px; margin-right: 10px; background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7) no-repeat;" data-kvrsrc="https://static.kvraudio.com/i/t/parallels-1.jpg"></span><span class="flexflexed">Parallels<br><span class="scxpsub">Rated 4 out of 5 by Introspective<br><em>24th February</em></span></span></a><a href="/reviews.php" class="cleanlnk">Read More Reviews</a></div></div></div>
+      </div>
+            <div id="kvr300600" style="width: 300px; height: 600px;">
+            <div class="bl0k300600" style="width: 300px; height: 600px;" id='div-gpt-ad-1406729622787-0'><script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1406729622787-0');});</script></div>
+            </div>
+            
+    </div>
+  </div>
+
+  <div id="foot">
+    <div id="div-gpt-ad-1319706183506-3" class="kvr320to728" style="padding: 0; margin: 0 auto;"><script>googletag.cmd.push(function(){googletag.display('div-gpt-ad-1319706183506-3');});</script></div>
+    <p style="margin-top: 10px;">&copy; KVR Audio, Inc. 2000-2020</p>
+    <p style="padding: 0 20px;"><a href="/submissions.php">Submit: News, Plug-ins, Hosts &amp; Apps</a> | <a href="/advertise">Advertise @ KVR</a> | <a href="/devs">Developer Account</a> | <a href="/aboutkvr.php">About KVR / Contact Us</a> | <a href="/privacy">Privacy Statement</a></p>
+  </div>
+</div>
+
+  <div>
+    <div></div>
+  </div>
+  </div>
+
+<script>
+
+function kvr_log_in(loginbox)
+{
+  if(!loginbox)
+  {
+    loginbox = ' <div class=\"posrelit\" style=\"min-width: 300px;\"> <div class=\"kvrform2019\" style=\"color: #555; font-family: Open Sans;\"> <h1>Please Log In</h1> <form action=\"/forum/ucp.php?mode=login\" method=\"post\"> <input type=\"hidden\" name=\"redirect\" value=\"https://www.kvraudio.com/forum/viewforum.php?f=43\"> <input type=\"hidden\" value=\"6dab6250a3a1333b56c5c1c37fa2ce06\" name=\"sid\"> <p>Username:<br> <input type=\"text\" name=\"username\" size=\"12\" maxlength=\"40\" value=\"\" autocomplete=\"username\"></p> <p>Password:<br> <input type=\"password\" name=\"password\" size=\"12\" maxlength=\"32\" value=\"\" autocomplete=\"current-password\"></p> <p><label class=\"flex flexcenter\" style=\"border-width: 0; box-shadow: none; padding: 0 !important;\"><input type=\"checkbox\" name=\"autologin\"> Keep Me Logged In</label></p> <p style=\"padding-botom: 0;\"><input type=\"submit\" name=\"login\" value=\"Log In\"></p> <hr> <div style=\"text-align: center; font-size: 0.8rem; line-height: 1.5;\"> <a href=\"https://www.kvraudio.com/forum/ucp.php?mode=sendpassword\" style=\"color: #36c;\">Forgotten Your Password?</a><br> <a href=\"https://www.kvraudio.com/forum/ucp.php?mode=resend_act\" style=\"color: #36c;\">Resend Activation E-mail</a><br> <a href=\"https://www.kvraudio.com/forum/ucp.php?mode=register\" style=\"color: #36c;\">Sign Up / Join / Register (FREE!)</a> </div> <input type=\"hidden\" name=\"creation_time\" value=\"1645964672\" /> <input type=\"hidden\" name=\"form_token\" value=\"6807878a68af7ad68a778472ca6da68495db6e7b\" /> </form> </div> <a href=\"#\" class=\"close-kvr-display-full-cover\" id=\"close-kvr-display-full-cover\" style=\"position: absolute;\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#555\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"></line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"></line></svg></a> </div>';
+  }
+
+  let div = document.getElementById("kvr-display-full-cover");
+
+  if(!div)
+  {
+    let tmp = document.createElement("div");
+    tmp.id = "kvr-display-full-cover";
+    document.body.appendChild(tmp);
+    div = document.getElementById("kvr-display-full-cover");
+  }else{
+    div.classList.remove("hideflex");
+  }
+
+  div.classList.add("kvr-darkbg-content-centered");
+  div.innerHTML = loginbox;
+  let scrollfix = document.querySelector(".kvr-darkbg-content-centered > div:first-child > div:first-child");
+  if(scrollfix)
+  {
+    scrollfix.scrollTop = 0;
+  }
+}
+
+$(function(){
+  
+    $(document).on("click", "#forumdealsearch > div > a", function(){
+      var s = $(this);
+      $("#forumdealsearch > div > a > span").removeClass("kvractive");
+      $(s).find("span").addClass("kvractive");
+      $("#forumdeals").html('<p style="text-align: center; padding: 10px;">'+kvrloadingcss3an2+'</p>');
+      if(kvrajax){kvrajax.abort();}
+      kvrajax = $.ajax({
+        url: "/deals.php?fp=3&order="+$(s).data("s"),
+        error: function(a,b,c){
+          if(b != "abort")
+          {
+            $("#forumdeals").html('<p style="padding: 20px; text-align: center;"><b>An error occurred. Please try again!</b></p>');
+          }
+        }
+      }).done(function(data){
+        $("#forumdeals").html(data);
+    	});
+      return false;
+    });
+    
+});
+kvrkart = [];
+kvrkartp = [];
+kvrspid = [];
+
+if(typeof document.querySelector('body').style.grid !== 'string'){document.querySelector('body').classList.add('kvrnogrid');}
+</script>
+<noscript><img src="/static/noscript/" alt=""></noscript>
+<script src="https://static.kvraudio.com/inc/kvr-foot.js?v=396"></script>
+<script src="//s.skimresources.com/js/25446X847199.skimlinks.js"></script>
+</body>
+</html>
