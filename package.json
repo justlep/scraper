@@ -1,7 +1,7 @@
 {
   "name": "@justlep/scraper",
   "description": "A simple scraper for HTML web pages",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "exports": {
     "import": "./index.js"

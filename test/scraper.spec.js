@@ -15,13 +15,16 @@ const TEST1_HTML = readFileSync(resolveProjectPath('test/html/scraper-test.html'
 const TEST2_URL = 'http://foo-bar.nil/test2';
 const TEST2_HTML = readFileSync(resolveProjectPath('test/html/list.html')).toString();
 
+const TEST3_URL = 'http://foo-bar.nil/test3';
+const TEST3_HTML = readFileSync(resolveProjectPath('test/html/title-break.html')).toString();
+
 // see https://hackerone.com/reports/678487
 const MALICIOUS_HOSTNAME_SPOOFING_URL = 'http://evil.c℀.victim.test/foo/bar?';
 
 describe('scraper', () => {
 
     beforeAll(() => {
-        for (const [url, html] of [[TEST1_URL, TEST1_HTML], [TEST2_URL, TEST2_HTML]]) {
+        for (const [url, html] of [[TEST1_URL, TEST1_HTML], [TEST2_URL, TEST2_HTML], [TEST3_URL, TEST3_HTML]]) {
             let {origin, pathname} = new URL(url);
             nock(origin)
                 .persist()
@@ -116,12 +119,25 @@ describe('scraper', () => {
     });
 
     it('should determine page titles', async () => {
-        let title = await lookupPageTitle(TEST1_URL);
+        let title = await lookupPageTitle(TEST1_URL, true);
 
         expect(typeof title).toBe('string');
         expect(title.includes('</title>')).toBe(false);
         expect(title).toMatchSnapshot();
     });
+
+    it('should determine page titles for multi-line titles', async () => {
+        let title = await lookupPageTitle(TEST3_URL, true);
+        expect(typeof title).toBe('string');
+        expect(title).toBe('Building best practices | Docker Docs');
+    });
+
+    // TODO docker page responds with pathname redirects, no origin; add static test case for this
+    // it('should determine the docker homepage title', async () => {
+    //     let title = await lookupPageTitle('https://docs.docker.com/develop/develop-images/dockerfile_best-practices/', true);
+    //     expect(typeof title).toBe('string');
+    //     expect(title).toBe('Building best practices | Docker Docs');
+    // });
 
     it('should reject page title lookups for malicious hostname-spoofing urls', () => {
         expect(() => lookupPageTitle(MALICIOUS_HOSTNAME_SPOOFING_URL)).rejects.toThrow('Invalid url');
