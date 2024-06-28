@@ -22,5 +22,20 @@
   "devDependencies": {
     "nock": "^13.5.4",
     "vitest": "^1.6.0"
-  }
+  },
+  "keywords": [
+    "scraping",
+    "scraper",
+    "cheerio"
+  ],
+  "homepage": "https://github.com/justlep/scraper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/justlep/scraper.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT"
 }
