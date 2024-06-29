@@ -26,6 +26,7 @@ npm i @justlep/scraper
 
 ```javascript
 import {
+  ScraperOpts,
   loadPageAsHtml,
   loadPageAsCheerio, 
   lookupPageTitle} from '@justlep/scraper';
