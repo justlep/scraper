@@ -179,4 +179,10 @@ describe('scraper', () => {
         expect($$.root().html().startsWith('<!DOCTYPE')).toBe(true);
         expect($('a')[0].attribs.href).toBe('#foo');
     });
+
+    it('can determine Reddit page titles', async () => {
+        expect(await lookupPageTitle('https://www.reddit.com/r/berlin/', true)).toEqual('Neues Aus Berlin');
+        expect(await lookupPageTitle('https://www.reddit.com/r/berlin/comments/1ha3nw3/5_d%C3%B6ners_anyone_know_where/', true))
+          .toEqual('€5 Döners? Anyone know where? : r/berlin');
+    })
 });
